@@ -1,0 +1,92 @@
+[
+  {
+    "id": "B-S01-eysenbach",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278109/",
+    "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278109/",
+    "file": "B-S01-eysenbach.html",
+    "bytes": 201028,
+    "sha256": "6c1acfb32c4bc60a190aa4c766fad88a74eb27c8bf422b1ecd344a4d7041491b",
+    "retrieved_at": "Sat, 17 Oct 2026 17:02:23 GMT"
+  },
+  {
+    "id": "B-S02-haustein",
+    "url": "https://arxiv.org/pdf/1308.1838",
+    "final_url": "https://arxiv.org/pdf/1308.1838",
+    "file": "B-S02-haustein.pdf",
+    "bytes": 1379068,
+    "sha256": "ec6f127af20f1d10e1c770f75b3e447790de8a74449efe8b8dc2b7e54170c017",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:38 GMT"
+  },
+  {
+    "id": "B-S03-bots",
+    "url": "https://arxiv.org/pdf/1410.4139",
+    "final_url": "https://arxiv.org/pdf/1410.4139",
+    "file": "B-S03-bots.pdf",
+    "bytes": 558548,
+    "sha256": "3b210abc4345666d43a72146af7385254fdc9b8b7b19c984c7017d1a096a2d9a",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:38 GMT"
+  },
+  {
+    "id": "B-S04-x-pricing",
+    "url": "https://docs.x.com/x-api/getting-started/pricing",
+    "final_url": "https://docs.x.com/x-api/getting-started/pricing",
+    "file": "B-S04-x-pricing.html",
+    "bytes": 739426,
+    "sha256": "dc743757255bcd8938e79004bd34ecb80278437734cd04f4d83bf1364fa5ddf5",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:38 GMT"
+  },
+  {
+    "id": "B-S05-reddit-2023",
+    "url": "https://redditinc.com/news/apifacts",
+    "final_url": "https://redditinc.com/news/apifacts",
+    "file": "B-S05-reddit-2023.html",
+    "bytes": 64020,
+    "sha256": "317dd143aba165f5cdffd06161b5c5bae3a6469bd6894ac722570c74ec5d76ca",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:38 GMT"
+  },
+  {
+    "id": "B-S06-reddit-current",
+    "url": "https://support.reddithelp.com/api/v2/help_center/en-us/articles/16160319875092.json",
+    "final_url": "https://support.reddithelp.com/api/v2/help_center/en-us/articles/16160319875092.json",
+    "file": "B-S06-reddit-current.html",
+    "bytes": 10371,
+    "sha256": "05481f2c5a8a1a62fc08437047296f1fa974d3416a5fffb3e5facc678b012af7",
+    "retrieved_at": "Sat, 17 Oct 2026 17:02:23 GMT"
+  },
+  {
+    "id": "B-S07-bloom",
+    "url": "https://www.nber.org/system/files/working_papers/w28999/revisions/w28999.rev1.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w28999/revisions/w28999.rev1.pdf",
+    "file": "B-S07-bloom.pdf",
+    "bytes": 4097663,
+    "sha256": "25e816d1c7519b7b7eedbd73b420ae42b1b71f77c14c555144c926d9b8719bac",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:39 GMT"
+  },
+  {
+    "id": "B-S08-mantegna",
+    "url": "https://arxiv.org/pdf/cond-mat/9802256",
+    "final_url": "https://arxiv.org/pdf/cond-mat/9802256",
+    "file": "B-S08-mantegna.pdf",
+    "bytes": 120536,
+    "sha256": "3a9fcaa0e116604a8cf4a036b692cfddddf764a5e52dbbc8800f3b813966bc81",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:38 GMT"
+  },
+  {
+    "id": "B-S09-etf",
+    "url": "https://www.nber.org/system/files/working_papers/w28369/w28369.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w28369/w28369.pdf",
+    "file": "B-S09-etf.pdf",
+    "bytes": 684024,
+    "sha256": "706ed942e2db1833af9b8d5dd58ed3d9a465f0fbb6bd92e9ec6947ed83b57231",
+    "retrieved_at": "Sat, 17 Oct 2026 17:01:39 GMT"
+  },
+  {
+    "id": "B-S10-code",
+    "url": "https://knowledge.uchicago.edu/records/eeeh9-3vv62/files/Dissertation_Donghyun_Kang_for_submission.pdf?download=1",
+    "final_url": "https://knowledge.uchicago.edu/records/eeeh9-3vv62/files/Dissertation_Donghyun_Kang_for_submission.pdf?download=1",
+    "file": "B-S10-code.pdf",
+    "bytes": 4982098,
+    "sha256": "c19bda9e197c214f310f76a33a73c60eaad0ac81077c1f5c4d8a87a8490bcad6",
+    "retrieved_at": "Sat, 17 Oct 2026 17:03:53 GMT"
+  }
+]

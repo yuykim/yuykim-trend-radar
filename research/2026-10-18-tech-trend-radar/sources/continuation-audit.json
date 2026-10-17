@@ -1,0 +1,212 @@
+{
+  "claim_count": 27,
+  "quote_count": 29,
+  "debate_quote_occurrences": 59,
+  "debate_full_rounds_preserved": true,
+  "failure_count": 0,
+  "records": [
+    {
+      "id": "A01",
+      "file": "sources\\A-horizon.md",
+      "quote": "Multiple interactive visualization interfaces that integrate these results together to assist human analysts are developed.",
+      "exit_code": 0,
+      "matches": "41:Multiple interactive visualization interfaces that integrate these results together to assist human analysts are developed."
+    },
+    {
+      "id": "A02",
+      "file": "sources\\A-wang.md",
+      "quote": "Thus, whether a topic can be considered as emergent depends on the choice of the parameter values.",
+      "exit_code": 0,
+      "matches": "166:Thus, whether a topic can be considered as emergent depends on the choice of the parameter values."
+    },
+    {
+      "id": "A03",
+      "file": "sources\\A-augur.md",
+      "quote": "Given this value, precision stays high (0.6-0.71) for the years from 1999 to 2005, while recall is in the range 0.43 to 0.63.",
+      "exit_code": 0,
+      "matches": "3321:Given this value, precision stays high (0.6-0.71) for the years from 1999 to 2005, while recall is in the range 0.43 to 0.63."
+    },
+    {
+      "id": "A04",
+      "file": "sources\\A-krenn.md",
+      "quote": "Pure ML methods were not yet able to outperform those that use hand-crafted features.",
+      "exit_code": 0,
+      "matches": "171:Pure ML methods were not yet able to outperform those that use hand-crafted features."
+    },
+    {
+      "id": "A05",
+      "file": "sources\\A-growth.md",
+      "quote": "When all RCs are included, neither model reaches the 25% CSI threshold in any year.",
+      "exit_code": 0,
+      "matches": "326:When all RCs are included, neither model reaches the 25% CSI threshold in any year."
+    },
+    {
+      "id": "A06",
+      "file": "sources\\A-eysenbach-pmc.txt",
+      "quote": "Top-cited articles can be predicted from top-tweeted articles with 93% specificity and 75% sensitivity.",
+      "exit_code": 0,
+      "matches": "108:Top-cited articles can be predicted from top-tweeted articles with 93% specificity and 75% sensitivity."
+    },
+    {
+      "id": "A07",
+      "file": "sources\\A-costas-full.md",
+      "quote": "Previous results are quite consistent and indicate a positive but weak correlation between altmetrics and citations.",
+      "exit_code": 0,
+      "matches": "264:Previous results are quite consistent and indicate a positive but weak correlation between altmetrics and citations."
+    },
+    {
+      "id": "A08",
+      "file": "sources\\A-penner.txt",
+      "quote": "We have provided significant evidence that the current predictive models for future impact possess far less predictive power than previously reported.",
+      "exit_code": 0,
+      "matches": "827:We have provided significant evidence that the current predictive models for future impact possess far less predictive power than previously reported."
+    },
+    {
+      "id": "A09",
+      "file": "sources\\A-lag.md",
+      "quote": "However, the time lag between patent and paper is long (>10 years) and getting longer, suggesting HCI research and practice may be inefficiently connected.",
+      "exit_code": 0,
+      "matches": "449:However, the time lag between patent and paper is long (>10 years) and getting longer, suggesting HCI research and practice may be inefficiently connected."
+    },
+    {
+      "id": "B01",
+      "file": "sources\\B-S01-eysenbach.search.txt",
+      "quote": "Tweets can predict highly cited articles within the first 3 days of article publication.",
+      "exit_code": 0,
+      "matches": "1:Tweets can predict highly cited articles within the first 3 days of article publication."
+    },
+    {
+      "id": "B02",
+      "file": "sources\\B-S01-eysenbach.search.txt",
+      "quote": "less clear for Scopus citations and rank correlations.",
+      "exit_code": 0,
+      "matches": "1:less clear for Scopus citations and rank correlations."
+    },
+    {
+      "id": "B03",
+      "file": "sources\\B-S02-haustein.search.txt",
+      "quote": "correlations between tweets and citations are low",
+      "exit_code": 0,
+      "matches": "1:correlations between tweets and citations are low"
+    },
+    {
+      "id": "B04",
+      "file": "sources\\B-S03-bots.search.txt",
+      "quote": "at least amount to 9% of tweets",
+      "exit_code": 0,
+      "matches": "1:at least amount to 9% of tweets"
+    },
+    {
+      "id": "B05",
+      "file": "sources\\B-S03-bots.search.txt",
+      "quote": "Only three accounts were considered more likely to be bots than humans.",
+      "exit_code": 0,
+      "matches": "1:Only three accounts were considered more likely to be bots than humans."
+    },
+    {
+      "id": "B06",
+      "file": "sources\\B-S04-x-pricing.search.txt",
+      "quote": "The X API uses pay-per-usage pricing.",
+      "exit_code": 0,
+      "matches": "1:The X API uses pay-per-usage pricing."
+    },
+    {
+      "id": "B06",
+      "file": "sources\\B-S04-x-pricing.search.txt",
+      "quote": "Posts: Read $0.005 per resource",
+      "exit_code": 0,
+      "matches": "1:Posts: Read $0.005 per resource"
+    },
+    {
+      "id": "B07",
+      "file": "sources\\B-S05-reddit-2023.search.txt",
+      "quote": "the rate for third-party apps that require higher usage limits is $0.24 per 1K API calls.",
+      "exit_code": 0,
+      "matches": "1:the rate for third-party apps that require higher usage limits is $0.24 per 1K API calls."
+    },
+    {
+      "id": "B08",
+      "file": "sources\\B-S06-reddit-current.search.txt",
+      "quote": "100 queries per minute (QPM) per OAuth client id",
+      "exit_code": 0,
+      "matches": "1:100 queries per minute (QPM) per OAuth client id"
+    },
+    {
+      "id": "B08",
+      "file": "sources\\B-S06-reddit-current.search.txt",
+      "quote": "Traffic not using OAuth or login credentials will be blocked",
+      "exit_code": 0,
+      "matches": "1:Traffic not using OAuth or login credentials will be blocked"
+    },
+    {
+      "id": "B09",
+      "file": "sources\\B-S07-bloom.search.txt",
+      "quote": "We identify novel technologies using textual analysis of patents, job postings, and earnings calls.",
+      "exit_code": 0,
+      "matches": "1:We identify novel technologies using textual analysis of patents, job postings, and earnings calls."
+    },
+    {
+      "id": "B10",
+      "file": "sources\\B-S07-bloom.search.txt",
+      "quote": "a false positive rate of about 10-20%.",
+      "exit_code": 0,
+      "matches": "1:a false positive rate of about 10-20%."
+    },
+    {
+      "id": "B11",
+      "file": "sources\\B-S07-bloom.search.txt",
+      "quote": "peak year",
+      "exit_code": 0,
+      "matches": "1:peak year\n1:peak year\n1:peak year"
+    },
+    {
+      "id": "B12",
+      "file": "sources\\B-S08-mantegna.search.txt",
+      "quote": "a meaningful economic taxonomy.",
+      "exit_code": 0,
+      "matches": "1:a meaningful economic taxonomy."
+    },
+    {
+      "id": "B13",
+      "file": "sources\\B-S08-mantegna.search.txt",
+      "quote": "economic factors which are specific to the considered group",
+      "exit_code": 0,
+      "matches": "1:economic factors which are specific to the considered group"
+    },
+    {
+      "id": "B14",
+      "file": "sources\\B-S09-etf.search.txt",
+      "quote": "over their first five years, specialized ETFs lose about 30% in risk-adjusted terms.",
+      "exit_code": 0,
+      "matches": "1:over their first five years, specialized ETFs lose about 30% in risk-adjusted terms."
+    },
+    {
+      "id": "B15",
+      "file": "sources\\B-S09-etf.search.txt",
+      "quote": "overvaluation of the underlying stocks",
+      "exit_code": 0,
+      "matches": "1:overvaluation of the underlying stocks"
+    },
+    {
+      "id": "B16",
+      "file": "sources\\B-S10-code.search.txt",
+      "quote": "papers enjoy approximately 20% advantages in monthly citation rates",
+      "exit_code": 0,
+      "matches": "1:papers enjoy approximately 20% advantages in monthly citation rates"
+    },
+    {
+      "id": "B17",
+      "file": "sources\\B-S10-code.search.txt",
+      "quote": "could influence the monthly citation rate for papers.",
+      "exit_code": 0,
+      "matches": "1:could influence the monthly citation rate for papers."
+    },
+    {
+      "id": "B18",
+      "file": "sources\\B-S10-code.search.txt",
+      "quote": "estimated effect sizes may vary",
+      "exit_code": 0,
+      "matches": "1:estimated effect sizes may vary"
+    }
+  ]
+}

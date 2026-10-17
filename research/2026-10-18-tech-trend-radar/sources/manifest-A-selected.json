@@ -1,0 +1,83 @@
+[
+  {
+    "source": "S01",
+    "url": "https://arxiv.org/pdf/2202.13480",
+    "original": "sources/A-horizon.pdf",
+    "text": "sources/A-horizon.md",
+    "bytes": 3211471,
+    "sha256": "10d059af4546d08f6c398e5df2aa58e3b754a21bfaee0cadd5fda64e30bc244f",
+    "text_sha256": "5bb13fd3a5b6cde7ca716a04dc11c02c6684266b87fc570cb770f5db92f7b5c1"
+  },
+  {
+    "source": "S02",
+    "url": "https://arxiv.org/pdf/1707.03599",
+    "original": "sources/A-wang.pdf",
+    "text": "sources/A-wang.md",
+    "bytes": 1090620,
+    "sha256": "8dac3252628ac70e7e375c68fb37420038b0f09d3b4aa1bb46e06238b98a7a2a",
+    "text_sha256": "36bb39b87533f54bd29d49c76b9b559af135f1c6e7ae19d0bc89596017da2df4"
+  },
+  {
+    "source": "S03",
+    "url": "https://arxiv.org/pdf/1912.08928",
+    "original": "sources/A-augur.pdf",
+    "text": "sources/A-augur.md",
+    "bytes": 7541091,
+    "sha256": "2cf6c53717fd6385111d8f8062a38a27c7f98412b1c1da894bddb93cd5697e26",
+    "text_sha256": "c57afbb967e79078b3ebe9ffa8b910399881ad2978428c61ddd6369f5711d420"
+  },
+  {
+    "source": "S04",
+    "url": "https://arxiv.org/pdf/2210.00881",
+    "original": "sources/A-krenn.pdf",
+    "text": "sources/A-krenn.md",
+    "bytes": 1844798,
+    "sha256": "88a48f8de98e000b2ad381838f9106a1a8344247b79b63e01f50f2fee346ec46",
+    "text_sha256": "c55e5f7fa1d176f486faf4ede8cb36d6050a18e0e038327766dd29e7b7348218"
+  },
+  {
+    "source": "S05",
+    "url": "https://arxiv.org/pdf/2004.13159",
+    "original": "sources/A-growth.pdf",
+    "text": "sources/A-growth.md",
+    "bytes": 1295385,
+    "sha256": "70b1c3af36ff1c08c96073454f63a8e63f754e81e1195713b1c19f258fced2e7",
+    "text_sha256": "90bd168bd02b74a0bec6b070ede64b58b206e652218598a5ebe1547f31fbab2f"
+  },
+  {
+    "source": "S06",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278109/",
+    "original": "sources/A-eysenbach-pmc.html",
+    "text": "sources/A-eysenbach-pmc.txt",
+    "bytes": 201028,
+    "sha256": "1ba966ea69834b557d5a090b7e6c64549c68397620fecaf7bed50e4790cd46df",
+    "text_sha256": "63ee062396bcd4105db2a2e624b8cf7a567084547fac9f7d8e4979f681b70f84"
+  },
+  {
+    "source": "S07",
+    "url": "https://arxiv.org/pdf/1401.4321",
+    "original": "sources/A-costas-full.pdf",
+    "text": "sources/A-costas-full.md",
+    "bytes": 371812,
+    "sha256": "d9ad72ea99c37edefebabae910482856ee4b794c1257faa973435f8b70e69807",
+    "text_sha256": "ad5c7a7e821c381942137de9d4b7e96b8ba780025604f00991a035e48a5941c3"
+  },
+  {
+    "source": "S08",
+    "url": "https://www.nature.com/articles/srep03052",
+    "original": "sources/A-penner.html",
+    "text": "sources/A-penner.txt",
+    "bytes": 329916,
+    "sha256": "e11b0d66af21369f5326a15cc53e66f003e222a2ce6fcb317b70fa50156ec94a",
+    "text_sha256": "ef595f99f92e69552d853e5f7335ae0b0de3a917a1f61907d77f7c5571b4f3a9"
+  },
+  {
+    "source": "S09",
+    "url": "https://hci.stanford.edu/publications/2023/hcitransfer-chi-2023.pdf",
+    "original": "sources/A-lag.pdf",
+    "text": "sources/A-lag.md",
+    "bytes": 7575067,
+    "sha256": "abffac1f34fe315a0a410c0f20f4fbfe27ec950ef3474f0e5a4fa05e48a3e054",
+    "text_sha256": "276bca733be1b52804fdb4d0324d6b1b419047afcdc82a680b5d5afd1a0b9101"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "A-augur",
+    "url": "https://arxiv.org/pdf/1912.08928",
+    "final_url": "https://arxiv.org/pdf/1912.08928",
+    "file": "A-augur.pdf",
+    "bytes": 7541091,
+    "sha256": "2cf6c53717fd6385111d8f8062a38a27c7f98412b1c1da894bddb93cd5697e26"
+  },
+  {
+    "name": "A-wang",
+    "url": "https://arxiv.org/pdf/1707.03599",
+    "final_url": "https://arxiv.org/pdf/1707.03599",
+    "file": "A-wang.pdf",
+    "bytes": 1090620,
+    "sha256": "8dac3252628ac70e7e375c68fb37420038b0f09d3b4aa1bb46e06238b98a7a2a"
+  },
+  {
+    "name": "A-horizon",
+    "url": "https://arxiv.org/pdf/2202.13480",
+    "final_url": "https://arxiv.org/pdf/2202.13480",
+    "file": "A-horizon.pdf",
+    "bytes": 3211471,
+    "sha256": "10d059af4546d08f6c398e5df2aa58e3b754a21bfaee0cadd5fda64e30bc244f"
+  },
+  {
+    "name": "A-eysenbach-pmc",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278109/",
+    "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278109/",
+    "file": "A-eysenbach-pmc.html",
+    "bytes": 201028,
+    "sha256": "1ba966ea69834b557d5a090b7e6c64549c68397620fecaf7bed50e4790cd46df"
+  },
+  {
+    "name": "A-costas-full",
+    "url": "https://arxiv.org/pdf/1401.4321",
+    "final_url": "https://arxiv.org/pdf/1401.4321",
+    "file": "A-costas-full.pdf",
+    "bytes": 371812,
+    "sha256": "d9ad72ea99c37edefebabae910482856ee4b794c1257faa973435f8b70e69807"
+  }
+]

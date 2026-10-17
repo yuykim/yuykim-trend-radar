@@ -1,0 +1,66 @@
+<p><em><strong>Please note</strong>: Some of the information in our legacy API documentation and support resources may be out of date. Always consult our </em><a href="https://www.redditinc.com/policies/developer-terms" target="_blank" rel="noopener noreferrer"><em>Developer Terms</em></a><span style="color: #1f2328;"><em> and </em></span><a href="https://www.redditinc.com/policies/data-api-terms" target="_blank" rel="noopener noreferrer"><em>Data API Terms</em></a><span style="color: #1f2328;"><em> for rules of use, terms, and conditions. Information linked from this page is for technical support guidance only.</em></span></p><p><span style="color: #1f2328;"><em>Join </em></span><a href="https://reddit.com/r/redditdev" target="_blank" rel="noopener noreferrer"><em>r/redditdev</em></a><span style="color: #1f2328;"><em> for updates from the Reddit team.</em></span></p><div class="callout callout--info"><p>Looking for the Reddit Ads API? <a href="https://ads-api.reddit.com/docs/v3/" target="_blank" rel="noopener noreferrer">See our terms</a>.</p></div><hr><h2 id="h_01HHQTDCCK58Z4FTR1A765GHW8">
+<br><span style="color: #1f2328;"><strong>Resources</strong></span>
+</h2><ul>
+<li data-list-item-id="e6f9e95d0bbc68ae16303cb0532ecf62f"><a href="https://www.redditinc.com/policies/developer-terms" target="_blank" rel="noopener noreferrer">Developer Terms</a></li>
+<li data-list-item-id="e8c201378cbcbae256f3c0f218d7309ac">
+<a href="https://www.redditinc.com/policies/data-api-terms" target="_blank" rel="noopener noreferrer">Data API Terms</a><span style="color: #1f2328;"> </span>
+</li>
+<li data-list-item-id="e39bf6c0fdf22d223ead59625e90bb07b">
+<span style="color: #1f2328;">Reddit's built-in </span><a href="http://www.reddit.com/dev/api" target="_blank" rel="noopener noreferrer">live API documentation</a>
+</li>
+<li data-list-item-id="e6069752f68de9e234aabe8235ddc1bf4">
+<span style="color: #1f2328;">Reddit<strong> requires</strong></span> <a href="https://github.com/reddit-archive/reddit/wiki/OAuth2" target="_blank" rel="noopener noreferrer">OAuth for authentication</a>
+</li>
+<li data-list-item-id="e87555b09aea50d7d822769e91163965c">Technical guidance for:<ul>
+<li data-list-item-id="eebd4e60204621a002e98aace16f86737"><a href="https://github.com/reddit-archive/reddit/wiki/API:-submit" target="_blank" rel="noopener noreferrer">Submit post</a></li>
+<li data-list-item-id="e5810c9b89103d9aae7e9d811c11189f7"><a href="https://github.com/reddit-archive/reddit/wiki/JSON" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li data-list-item-id="e20cfad8581d6a647e74b14db0a34eec0"><a href="https://github.com/reddit-archive/reddit/wiki/OAuth2-App-Types" target="_blank" rel="noopener noreferrer">OAuth2</a></li>
+<li data-list-item-id="e48b6800397c7b12f211b80b6b2d26b5d"><a href="https://www.reddit.com/r/redditdev/comments/1hcsbde/introducing_new_announcements_apis/" target="_blank" rel="noopener noreferrer">Announcements</a></li>
+</ul>
+</li>
+</ul><hr><h2 id="h_01HHQTDCCK4WA84KQ9EKX8C11D">
+<br><span style="color: #1f2328;"><strong>Rules</strong></span>
+</h2><ul>
+<li data-list-item-id="efc04f273d1d4f3f7b25409af5628b9ea">
+<span style="color: #1f2328;">You can use the Reddit Data API, subject to our </span><a href="https://support.reddithelp.com/hc/articles/42728983564564" target="_blank" rel="noopener noreferrer"><span style="color: #1f2328;">Responsible Builder Policy</span></a><span style="color: #1f2328;">, </span><a href="https://www.redditinc.com/policies/developer-terms" target="_blank" rel="noopener noreferrer">Developer Terms</a><span style="color: #1f2328;"> and </span><a href="https://www.redditinc.com/policies/data-api-terms" target="_blank" rel="noopener noreferrer">Data API Terms</a><span style="color: #1f2328;">. </span>
+</li>
+<li data-list-item-id="ec7297a6d494e4b9a69296f9524945a12">
+<span style="color: #1f2328;">To request, please contact us </span><a href="https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164" target="_blank" rel="noopener noreferrer">here</a><span style="color: #1f2328;">.  </span>
+</li>
+<li data-list-item-id="e855ac72fb9b067998b8b5c562c2e84e5">
+<span style="color: #1f2328;">Clients must authenticate with a registered </span><a href="https://github.com/reddit-archive/reddit/wiki/OAuth2" target="_blank" rel="noopener noreferrer">OAuth</a> token. We can and will freely throttle or block unidentified Data API users. </li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="eaf3bd04f771c79153d02a33efb2bca82">
+<p><span style="color: #1f2328;">You must use a User-Agent where possible. Change your client's User-Agent string to something unique and descriptive, including the target platform, a unique application identifier, a version string, and your username as contact information, in the following format:</span></p>
+<pre class="wysiwyg-code-block"><code class="language-auto">&lt;platform&gt;:&lt;app ID&gt;:&lt;version string&gt; (by /u/&lt;reddit username&gt;)</code></pre>
+<ul>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e156750bb5b58c2dc51a5bb5c5e4f8073">
+<p><span style="color: #1f2328;">Example: </span></p>
+<pre class="wysiwyg-code-block"><code class="language-auto">User-Agent: android:com.example.myredditapp:v1.2.3 (by /u/kemitche)</code></pre>
+</li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e3fc07ffb430d95b7afd34100e12053f7"><span style="color: #1f2328;">Many default User-Agents (like "Python/urllib" or "Java") are drastically limited to encourage unique and descriptive user-agent strings.</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e632ba04a9dc2e6c6c916e5dce33aca7b"><span style="color: #1f2328;">Including the version number and updating it as you build your application allows us to safely block old buggy/broken versions of your app.</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="ec77bdb5b14847d4db5b6036fc2ba110d"><span style="color: #1f2328;">NEVER lie about your User-Agent. </span></li>
+</ul>
+</li>
+<li data-list-item-id="eb3a4d9cce08d1809a2971297d9164cec">
+<span style="color: #1f2328;">Our robots.txt is for search engines, not Data API users. </span><br> </li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e700f73ba5f5ac18a725f91ae06c2cad3">
+<span style="color: #1f2328;">You must remove any user content in your possession that has been deleted from Reddit. </span><ul>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e7ab641c83b6b8df99ef9745c1ced85fc"><span style="color: #1f2328;">When posts and comments are deleted, you must delete all content related to the post and/or comment (e.g., title, body, embedded URLs, etc.).</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e72c3f7b54c62c1b699338dadb31446d1"><span style="color: #1f2328;">When a user account is deleted, you must delete all related user ID info (e.g., t2_*). You must also delete all references to the author-identifying information (i.e., the author ID, name, profile URL, avatar image URL, user flair, etc.) from posts and comments created by that account. </span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e0228200e245e8cae12722fa94272df5a"><span style="color: #1f2328;">To best comply with this policy, we strongly recommend routinely deleting any stored user data and content within 48 hours.</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e72c7f36eefa5b1e34079cb4fc1ecc890"><span style="color: #1f2328;">Note that retention of content and data that has been deleted–-even if disassociated, de-identified or anonymized–-is a violation of our terms and policies.</span></li>
+</ul>
+</li>
+</ul><hr><h2 id="h_01HHQTDCCKDPYC58DK5ZX19F3Q">
+<br><span style="color: #1f2328;"><strong>Rate Limits</strong></span>
+</h2><p><span style="color: #1f2328;">Monitor the following response headers to ensure that you're not exceeding the limits:</span></p><ul>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e36ba4235f4c78832329bceeafb19f88b"><span style="color: #1f2328;">X-Ratelimit-Used: Approximate number of requests used in this period</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="edc8795566e71d05ace51ab78db9f0886"><span style="color: #1f2328;">X-Ratelimit-Remaining: Approximate number of requests left to use</span></li>
+<li class="wysiwyg-list-color" style="--wysiwyg-list-marker-color: #1f2328;" data-list-item-id="e959dce70d235f3b5d15b1db1e9a7a58b"><span style="color: #1f2328;">X-Ratelimit-Reset: Approximate number of seconds to end of period</span></li>
+</ul><p>We enforce rate limits for those eligible for free access usage of our Data API. The limit is:   </p><ul><li data-list-item-id="e4e7cd2fc64c577b049c4360b54c7f578">100 queries per minute (QPM) per OAuth client id</li></ul><p>QPM limits will be an average over a time window (currently 10 minutes) to support bursting requests.</p><p>Free access usage also includes the following rate limits for chat messages:</p><ul>
+<li data-list-item-id="eb6971afba32851ebbf75774db7c9df8c">2,000 messages per day per recipient</li>
+<li data-list-item-id="e43366603fb778fc53ddf382d0dff16a6">3,000 messages per day total</li>
+</ul><p><a href="https://www.reddit.com/r/ModSupport/wiki/modsupportbot/" target="_blank" rel="noopener noreferrer">Bot</a> API users can join up to 300 chat rooms per day.</p><p>Traffic not using OAuth or login credentials will be blocked, and the default rate limit will not apply.<br><br> </p><hr><h2 id="h_01HHQTDCCKZCXKY4VNC9044QVZ">
+<br><span style="color: #1f2328;"><strong>Mod Bot Support</strong></span>
+</h2><p>If you believe your mod bot needs to exceed these updated rate limits, or will be unable to operate, please <a href="https://reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164" target="_blank" rel="noopener noreferrer">reach out using our contact form</a>. </p>

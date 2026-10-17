@@ -1,0 +1,1219 @@
+On the Predictability of Future Impact in Science | Scientific Reports
+Skip to main content
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles and JavaScript.
+Advertisement
+View all journals
+Saved research
+Search
+Log in
+Content
+Explore content
+About
+the journal
+Publish
+with us
+Sign up for alerts
+RSS feed
+nature
+scientific reports
+articles
+article
+On the Predictability of Future Impact in Science
+Download PDF
+Download PDF
+Article
+Open access
+Published:
+29 October 2013
+On the Predictability of Future Impact in Science
+Orion Penner
+1
+na1
+,
+Raj K. Pan
+2
+na1
+,
+Alexander M. Petersen
+3
+,
+Kimmo Kaski
+2
+&
+…
+Santo Fortunato
+2
+Show authors
+Scientific Reports
+volume
+3
+, Article number:
+3052
+(
+2013
+)
+Cite this article
+Save article
+View saved research
+11k
+Accesses
+137
+Citations
+83
+Altmetric
+Metrics
+details
+Abstract
+Correctly assessing a scientist's past research impact and potential for future impact is key in recruitment decisions and other evaluation processes. While a candidate's future impact is the main concern for these decisions, most measures only quantify the impact of previous work. Recently, it has been argued that linear regression models are capable of predicting a scientist's future impact. By applying that future impact model to 762 careers drawn from three disciplines: physics, biology, and mathematics, we identify a number of subtle, but critical, flaws in current models. Specifically, cumulative non-decreasing measures like the
+h
+-index contain intrinsic autocorrelation, resulting in significant overestimation of their “predictive power”. Moreover, the predictive power of these models depend heavily upon scientists' career age, producing least accurate estimates for young researchers. Our results place in doubt the suitability of such models, and indicate further investigation is required before they can be used in recruiting decisions.
+Similar content being viewed by others
+Early-career factors largely determine the future impact of prominent researchers: evidence across eight scientific fields
+Article
+Open access
+01 November 2023
+Hot streaks and disruptiveness in the career of scientists: is there an association between both phenomena?
+Article
+Open access
+29 August 2025
+Quantifying the dynamics of peak disruption in scientific careers
+Article
+Open access
+28 March 2025
+Explore related subjects
+Discover the latest articles and news in related subjects.
+Applied mathematics
+Applied physics
+Computational science
+Statistics
+Bibliometric Methods in Higher Education Analysis
+Introduction
+Science has evolved a merit driven career advancement process in which an individual is promoted through the various career stages on the strength of his or her past achievements and perceived potential for future achievement. Committees charged with the task of evaluating the past accomplishments and projecting the future success of applicants are at the core of these advancement decisions, whether they be fellowship, grants, tenure track hires, tenure
+etc.
+In this context, evaluation is rarely a straightforward matter, as recent case studies indicate that grant committee selection decisions do not necessarily correlate with either the peer-review process or cumulative achievement measures
+1
+.
+Faced with applicant pools ranging in size from dozens, for tenure track hires, to thousands for national fellowship and tenure competitions, it is a great challenge to distill the contents of each
+curriculum vitae
+to an assessment of an individual's past, present and future impact and arrive to an appropriate ranking of candidates. Further, it is important to recognize that
+future
+impact is at the heart of this matter because the ultimate questions are: Which candidate will be most successful in
+this
+position? With
+this
+fellowship? Do the most with
+this
+grant? Emphasis is typically placed on past success but, for the most part, it is only relevant in so far as it correlates with future success.
+When an early career scientist is selected for a tenure track position it is not simply a matter of filling an open position. The hire itself is an investment, at some institutions with low tenure rates it can amount to an outright bet on one researcher who requires a start-up package upwards of a millions of dollars
+2
+. The economics alone make this an issue that deserves attention. Nevertheless, beyond finances, these career advancement decision also play a critical role in most of the major problems commonly identified with the academic profession. For example, while gender biases may appear as early as undergraduate studies
+3
+, it is widely felt that ‘pipeline’ really leaks in the later career decision points
+4
+,
+5
+,
+6
+.
+For individual researchers the most widely known measure of impact is Hirsch's
+h
+-index
+7
+. Debate continues over whether
+h
+-index is a good way to measure a researcher's quality, but as it is evident by its growth in popularity [
+Fig. 1 (A)
+] it is reaching a level of acceptance and more importantly, a level of formal use
+8
+. While it has been shown that a correlation exists between a researcher's current and future
+h
+-index, the
+h
+-index is clearly a measure of a researcher's past accomplishments
+9
+. In recent work Acuna et al. propose a model for a researcher's future
+h
+-index and thereby establish a clear and concrete framework for connecting a researcher's current CV to his or her future impact in research
+10
+. On the conceptual level this aligns much better with the goal of most career advancement decisions, as they are largely focused on what a researcher
+will
+produce rather than what he or she
+has
+produced.
+Figure 1
+Full size image
+(A) Monthly
+Google
+search volume for the term “
+h
+-index”, normalized to % peak value. Since the initial publication proposing the
+h
+-index on Nov. 15, 2005
+7
+, there has been roughly a 4-fold increase in
+h
+-index search volume over the 7-year period Dec. 2005–Dec. 2012, capturing the persistent increasing interest and use of
+h
+over time
+28
+. (B) Schematic illustration of the career stages that define academic careers. The
+h
+-index is a cumulative non-decreasing quantity intended to measure both the productivity and impact of a scientist
+i
+up to year
+t
+7
+. However, models for predicting
+h
+(
+t
++ Δ
+t
+) must account for two important factors: (i)
+h
+(
+t
+) is non-decreasing so that “predictability” measures for
+h
+(
+t
++ Δ
+t
+) can be artificially inflated, and (ii) variations in the “risk” profile and the “production function” of scientists across career stages must be accounted for in predictive models.
+However, on a technical level cumulative achievement models, such as the Acuna model, suffer from methodological flaws mainly arising from the fact that the
+h
+-index is a non-stationary measure
+11
+,
+12
+. Here we show that any regression model aimed at “predicting” should avoid using cumulative, non-decreasing, career measures because the retention of past information intrinsic to such measures will yield artificially large coefficients of determination
+R
+2
+. A second methodological flaw exists in that prediction models should not mix career data from different age cohorts because such models deal poorly with the radically different levels of uncertainty characteristic of the various stages of career trajectories [
+Fig. 1 (B)
+]. Even efforts to predictively model academic careers by disentangling the past and future components of scientific achievement
+13
+, suffers from this second methodological flaw.
+Analyzing a large set of careers distributed across 3 disciplines, physics, biology and mathematics (see Methods), we show that although future measures of impact are correlated with past measures, the current state of the art models simply do not do a good enough job of predicting future impact to be used with confidence in the career advancement decision process. We demonstrate this using career data of established scientists, as well as junior scientists. The analysis of the benchmark set of stellar senior scientists serves as an upper bound on “predictive power”, while the junior scientists represent a set closer to the typical case in which these will be applied in real academic hiring decisions.
+Results
+Modeling cumulative measures
+Here we consider linear regression models of the
+h
+-index but the analysis presented can be trivially extended to any cumulative measure of impact. A recent publication proposes a model for predicting an individual's future
+h
+-index based on linear regression of five other metrics
+10
+. As a group, these five metrics were found to be the best for predicting future
+h
+-index. In this linear regression model the
+h
+-index
+h
+(
+t
++ Δ
+t
+) of an individual at time
+t
++ Δ
+t
+is given by
+The variables found on the right-hand side of Eq. 1 are values calculated for a given
+t
+, the number of years since the researcher's first publication. We will also refer to
+t
+as “career age”. For a given researcher, at a given career age
+t
+, the other variables are as follows:
+h
+(
+t
+) is the
+h
+-index;
+n
+p
+(
+t
+) is number of publications authored or co-authored;
+j
+(
+t
+) is the number of distinct journals of the publications;
+q
+(
+t
+) is the number of papers published in high impact journals. The parameter associated with each independent variable is arrived at using linear regression with elastic net regularization (see Methods). We apply the above model to predict the future
+h
+-index (as measured by the percentage variance explained, given by the squared correlation coefficient
+R
+2
+) for both prominent physicists and prominent biologists. For both data sets the model shows high
+R
+2
+when lumping together all career ages (red curves in
+Fig. 2
+). Even 15 years into the future the model yields
+R
+2
+values of 0.75 and 0.76, respectively. These results are consistent with previous analyses and give the impression that the model is quite good at predicting a scientist's future
+h
+-index. For both these datasets, the variations of standardized coefficient are shown in
+Supplementary Fig. S1
+. The coefficient related to the
+h
+-index at the time of prediction (career age
+t
+) is the largest; the coefficient for the number of article published is also quite high especially in the distant future. In contrast, coefficients for publishing in many distinct journals and top journals are relatively small.
+Figure 2: The “predictive power” of the regression model of the
+h
+-index for different disciplinary datasets and for different career age cohorts (years since first publication
+t
+= 3, 5, 7).
+Full size image
+The curve for
+t
+= All shows the model of Eq. 1, where all career ages were lumped together. For all the cases, overall regression model is significant (
+p
+< 10
+−6
+, calculated from F-statistic).
+Age-dependent cumulative model
+To assess the suitability of prediction models for applications in the real world, we analyze the
+t
+-dependence of the above model. We use the same regression variables as in Eq. 1 but disaggregate the prediction problem into sets of fixed career age (
+t
+). By modeling each career age separately we analyze the robustness of the above model with respect to varying career age. In this case the predicted
+h
+-index Δ
+t
+years in the future, of a scientist who is at a career age
+t
+, is given by:
+Note that as the data is already segregated by career age,
+t
+is not considered as an independent variable in this version of the model. In
+Figure 2
+we also show the model's predictive power for different career ages, for prominent physicists and biologists. The model's predictive power for early career researchers is far lower than the previous model where all career ages were lumped together (
+t
+= All). Although these results indicate the future of scientists at early stages of their career is less predictable, the
+R
+2
+values are still quite high, particularly for biologists. Those who are at the 3rd and 5th year of their career have
+R
+2
+= 0.63 and
+R
+2
+= 0.73 respectively, 10 years into the future. These values are notably high and may give the impression that an individual researcher's career trajectory is easily predicted even from a very early point. However, in the following section we show that cumulative measures like the
+h
+-index contain an intrinsic auto-correlation that not only results in this career age difference in the predictive power, but more importantly, to a dangerous overestimation of the model's overall predictive power. Further, the variations of standardized coefficients as shown in
+Supplementary Fig. S2
+for
+t
+= 3 and
+t
+= 7 are different compared to the
+t
+= All case. Although, the coefficient related to the
+h
+-index is still largest, the coefficient for the number of papers in high impact journals is comparable, especially for biologist career. The variation of the coefficient related to
+h
+-index also increases with time, which is in contrast to the observation when all career ages were lumped together (
+t
+= All). Moreover, different coefficients for different career age means that they can not be aggregated together for regression analysis. Further, when a given dataset is sliced into two different groups, both the
+R
+2
+values as well as the coefficients of the regression models were different (
+Fig. S3–S4
+), suggesting another weakness of this analysis.
+Non-stationary time series
+An academic career is an endeavor influenced by many factors, and in that light the Acuna model takes a step in the right direction by integrating several different variables into a prediction. However, the
+h
+-index is a
+cumulative
+measure and hence, is non-stationary. This makes the
+h
+-index the incorrect dependant variable to target for prediction. In this context we are using the weak definition of stationarity, which requires the mean and variance of a generic stochastic process to be time independent and the auto-covariance between the variable at
+t
+and
+t
++ Δ
+t
+be a function only of Δ
+t
+. As we show below its non-stationary nature makes the
+h
+-index a poor predictor because it implies an intrinsic correlation that (i) explains, in part, the career age dependence noted above and (ii) results in an overestimation of the predictive power of models focused on predicting the future
+h
+-index and all other cumulative measures.
+First, we consider a simple model for the evolution of an individual researcher's
+h
+-index, in which his/her
+h
+-index in a given year is a sum of yearly independent and random increments Δ
+h
+. Hence, for a given researcher
+s
+, his/her
+h
+-index after
+t
+-years is given by
+where the
+are independent displacements with
+and
+, for all
+i
+.
+Next we consider the statistical properties of the above model. The expected value of the
+h
+-index at career age
+t
+is
+and the variance
+The auto-covariance is
+Thus, the correlation between
+h
+(
+t
++ Δ
+t
+) and
+h
+(
+t
+) equals
+The mean, variance and auto-covariance depend on
+t
+. Further,
+h
+s
+(
+t
++ Δ
+t
+) and
+h
+s
+(
+t
+) are completely correlated when Δ
+t
+/
+t
+≈ 0, that is when the researcher's career age is much greater than the number of years into the future you are attempting to predict his/her
+h
+-index. Likewise,
+h
+s
+(
+t
++ Δ
+t
+) and
+h
+s
+(
+t
+) are completely uncorrelated as Δ
+t
+/
+t
+→ ∞, i.e. when attempting to predict an individual's
+h
+-index many more years into their future than the current career age.
+Even disregarding the limiting behavior, Eq. 7 shows why regression models that attempt to predict the future
+h
+-index cannot perform as well for 'young' careers as for ‘old’ ones. Further, the fact that the correlation between current and future
+h
+-index intrinsically increases with researcher's age (for fixed Δ
+t
+) indicates that the observed predictive power of models of
+h
+(
+t
++ Δ
+t
+) may only be an outcome of general properties of the evolution of cumulative measures, rather than true ability to predict the future impact of a researcher.
+Empirical evidence of overestimation
+In this section we provide additional evidence that a trivial correlation is indeed present in
+h
+-index and it leads to a significant overestimation of the predictive power of linear models. To do this we resort to null models. That is, we explore a number of methods for constructing synthetic careers from the real career data, and show that when linear models for
+h
+-index are applied to these careers high
+R
+2
+values result. However, within these models all information that a linear regression model should be using to predict an individual's future
+h
+-index has been ‘scrambled’, thus the resulting
+R
+2
+values should be (essentially) nil in the absence of the correlation arising from the fact
+h
+-index is a cumulative measure.
+We refer to our first null model as the Δ
+h null model
+. Here we construct synthetic careers of physicists with the following procedure. First we generate the distribution of single year
+h
+-index increases for all careers in a given dataset.
+Figure 3 (a)
+shows this distribution is narrow, with 98% of the yearly increments less than 5. Second we generate a career by constructing a sequence of yearly
+h
+-index increases, drawn randomly from the distribution generated in the previous step. Two such career trajectories can be found in
+Figure 3 (b)
+. Finally we apply a simple linear model,
+h
+(
+t
++ Δ
+t
+) =
+β
+0
++
+β
+h
+h
+(
+t
+). The
+R
+2
+values produced by this approach can be found in
+Figure 3 (c)
+. The
+R
+2
+values are quite high, far higher than the cumulative model of Eq. 1 applied to real careers. But what do these high
+R
+2
+values mean? Are they an indicator of predictive power and ability to discriminate between promising and not so promising careers? This is not the case as due to the manner in which the careers are generated, over any interval, the
+h
+-index of a researcher will increase by the same (average) amount at each step, regardless of whether the researcher has a high or a low
+h
+-index at that point. We conclude that such high
+R
+2
+values do not indicate predictive power, but they are rather evidence of intrinsic autocorrelation.
+Figure 3: Correlation in non-stationary time series.
+Full size image
+(A) Distribution of Δ
+h
+, i.e., the increment in scientist's
+h
+-index in consecutive years. (B) The evolution of
+h
+-index of two scientists in our dataset and their randomized version. (C) Variation of “predictability”
+R
+2
+with time for two different null models considered in the paper. (D) The auto-correlation of the actual value of the stock market index (not the price return) of 5 different countries. In (C) and (D), overall regression model is significant (
+p
+< 10
+−6
+).
+We refer to our second null model as the
+paper shuffle null model
+. In this case all papers published in year
+t
+are shuffled and distributed randomly across all researchers (see
+Supplementary Text for details
+). Hence, in this model the number of papers a researcher published in each year of his/her career is conserved. However, since papers are randomly assigned to each researcher each career is, statistically speaking, indistinguishable from each other in that every one has the same probability of ‘writing’ a high impact paper. In
+Figure 3 (c)
+it can be seen that, as with the
+δh
+null model, this null model produces high
+R
+2
+values again indicating not predictive power but the presence of inherent correlation.
+Finally, as an example of a system where simple models are known to have little predictive power, yet produce significant
+R
+2
+values, we turn to financial time series. We considered the stock market index of 5 different markets for the 15-year time period October 1997 to September 2012. In
+Figure 3 (d)
+we plot the correlation (regression) of the index value at time
+p
+(
+t
++ Δ
+t
+) against
+p
+(
+t
+) as a function of Δ
+t
+. We note that this quantity exhibits a high degree of correlation even after 100 days. However, the analysis of the autocorrelation of index return (the actual predictability) shows that it decays quickly, thus supporting the efficient market hypothesis
+14
+,
+15
+.
+Modeling non-cumulative measures
+The results presented above provide significant evidence that linear regression models are not so much predicting future impact as they are picking up on a correlation intrinsic to cumulative measures. Auto correlation, Eq. 7, is only present in cumulative measures like total number of publications, total number of citations, total number of publications in distinct journals,
+etc.
+It is not present in non-cumulative measures, e.g., the incremental
+h
+-index, Δ
+h
+(
+t
+, Δ
+t
+) =
+h
+(
+t
++ Δ
+t
+) −
+h
+(
+t
+). Following the derivation above, the mean
+and variance Var[Δ
+h
+(
+t
+, Δ
+t
+)] =
+σ
+2
+Δ
+t
+are independent of time, resulting in the auto-covariance Cov[Δ
+h
+(
+t
++
+τ
+, Δ
+t
+), Δ
+h
+(
+t
+, Δ
+t
+)] = 0 if
+τ
+> 0. Hence, it is important to examine the
+R
+2
+for non-cumulative measures. Here we focus on a regression model for the incremental
+h
+-index Δ
+h
+(
+t
+, Δ
+t
+) of a scientist at career age
+t
+, which by analogy with Eq. 2 reads
+In
+Supplementary Fig. S5
+we show this model's “predictive power”, as measured by
+R
+2
+, for different career ages
+t
+and varying horizons Δ
+t
+. All the curves except for early career years
+t
+= 1 and
+t
+= 2 follow similar behavior and there is no consistent trend of decreasing
+R
+2
+with decreasing
+t
+. The careers at
+t
+= 1 show lower correlation, indicating that the state of an individual's CV after his/her first year of publishing is a poor predictor of his/her future trajectory. In
+Figure 4
+we show this average predictive power for the model when applied to established physicists, biologists and mathematicians from different age cohorts. It is immediately clear that when dealing with the non-cumulative measure, Δ
+h
+(
+t
+, Δ
+t
+), the model has significantly less predictive power.
+Figure 4: The “predictive power” of
+h
+-index increments (Δ
+h
+(
+t
+, Δ
+t
+)) for different discipline.
+Full size image
+(A,B,C) Variation of the mean
+R
+2
+as a function of time period Δ
+t
+over which the increment is calculated for established physicists, biologists and mathematicians. The mean is calculated by averaging over different career age cohorts
+t
+= 2, …, 15. (D,E,F) Variation of the mean standard coefficient as a function of Δ
+t
+. The shaded region indicates the 95% confidence error bars. Similar plots are also shown for relatively young researchers in (G,H,I) for assistant professors in physics, biologists and graphene researchers. As the careers of young scientists are short, in this case the mean is calculated by averaging over different career age cohorts
+t
+= 2, …, 8. In all the cases, overall regression model is significant (
+p
+< 10
+−2
+).
+Figure 4
+also shows that the incremental variation in the
+h
+-index of a prominent biologist is more tightly connected to his/her past metrics. We speculate this may be due to other factors, like leading a large laboratory. We note similar behavior for prominent mathematicians. As these three datasets represent only prominent scientists, selected based upon their high success, the
+R
+2
+values give an upper bound on predictability of scientists in that field. In contrast the dataset of physics assistant professors, young biologists and graphene researchers, all relatively young scientists, exhibit much lower
+R
+2
+. Finally we show the variation of the mean of the standard coefficient of the model. The coefficient related to
+h
+-index is not as important as we found for Eq. 1, and other factors such as number of publications, number of publications in distinct journals, and number of publications in top journals are more important. For prominent biologists the coefficients for publication in top journals and number of publications are higher than for physicists. For mathematicians the coefficient related to the number of distinct journals is largest. In relative terms, the coefficient of the
+h
+-index is more important for physicists.
+Although this figure shows the average trend, one ought to exercise caution in interpreting the results because coefficients for scientists at different stages of their careers are also different. For example,
+Supplementary Fig. S6
+shows the coefficient for age
+t
+= 3,
+t
+= 5 and
+t
+= 10 for both prominent physicists and biologists. It is easy to see that the coefficient related to the number of papers decreases as Δ
+h
+is measured over larger Δ
+t
+. Further, for biologists, the coefficient for the number of publications in top journals is larger in the late part of the career than in the early stages. Nevertheless, the coefficients of the regression analysis were different even when for the same set of scientist during different age of their career. This variation in the coefficients across fields, as well as across career stages, indicates that it is unlikely there is a unique set of parameter that can be used to predict future impact for all cases.
+Correlating past and true future
+Although in the previous section we considered non-cumulative measures of scientific productivity and impact, the correlation between an individual's past accomplishments and future achievements deserves a more fine grained examination. For example, the number of citations received by a scientist at career age
+t
+, during the period Δ
+t
+years into the future depends both upon the papers he/she has written up to year
+t
+and upon the papers published up to year
+t
++ Δ
+t
+. Similarly, the increase in
+h
+-index during any given period is due to citations to papers he/she has already written in past years as well as citations to papers published during the period in question. In order to investigate the career uncertainty across academic transition points we analyze each scientist's citation impact over 3 consecutive non-overlapping periods. The first period, {
+T
+early
+}, starts at the beginning of his/her career,
+t
+= 1, and extends up to
+t
+= 5. The second period, {
+T
+mid
+}, starts at year
+t
+= 6 and extends to
+t
+= 10, while the third period, {
+T
+late
+}, starts at year
+t
+= 11 and extends to
+t
+= 15 years. For each period, we collect for each scientist only the publications that he/she published within that period, and, considered the citations received by these publications within the same period.
+We calculate three non-cumulative impact measures for each scientist: (a) the total number of publications
+n
+p
+(
+t
+|{
+T
+j
+}); (b) the square root of total number of citations
+; (c) the
+h
+-index
+h
+(
+t
+|{
+T
+j
+}). These measures account only for citations within the period to papers also published within that period. In this way, we test the predictability of the citation impact of a scientist's future work using publication information measuring his/her earlier research.
+Figure 5
+shows a scatter plot of physicists for all the three measures. The left panels show the correlation between the ‘early’ and the ‘mid’ career and the right panels show the correlation between the ‘mid’ and the ‘late’ career. The correlation coefficient
+R
+is also shown for each measure. These values are lower than, but qualitatively similar to, the observation in
+Fig. 4
+, indicating that future measures are indeed somewhat correlated with the past. We found that for all the measures the correlation between past and future is similar. Thus our analysis suggests that all these measures are equally good (or equally bad) in predicting future impact. Further, the correlation between mid and late career is slightly higher than the correlation between early and mid. This is reasonable in so far as there is greater fluctuation in the early career stage than the later stages when scientists are more established. Additionally, our results diverge from recent work showing that future citations to future work are hardly predictable
+13
+. Instead, we found low but significant correlation between past and future measures. It is possible that this difference arises from the fact that this portion of our analysis focuses on scientists that are all relatively well established, thus missing scientists that produce low impact work and ultimately exit academia. This result does nevertheless suggest that the predictability of top scientists can be used as an extreme upper bound for the predictability of all scientific careers. The results for prominent biologists and mathematicians are qualitatively similar, whereas for young researchers, physics assistant professors, young biologists and graphene researchers correlation is much smaller (
+Fig. S7–S11
+).
+Figure 5: Correlation between the past and the true future for prominent physics careers.
+Full size image
+Scatter plot of the number of papers calculated for each author using non-intersecting sets of papers published in (A) “early”- and “mid”- career periods and (B) “mid”- and “late”- career periods. Scatter plot of the square root of number of total citations for each author in (C) “early”- and “mid”- career periods and (D) “mid”- and “late”- career periods. Scatter plot of non-cumulative
+h
+-index
+h
+(
+t
+|{
+T
+j
+}) calculated for each author using non-intersecting sets of papers published in consecutive (E) “early”- and “mid”- career periods and (F) “mid”- and “late”- career periods. The correlation coefficient
+R
+for each plot is also shown.
+Discussion
+The sheer amount of information that enters into an evaluation is daunting. In addition to the research output, factors such as the prestige of an applicant's previous institutions
+16
+,
+17
+, supervisors
+18
+, volume and quality of service work, teaching and mentoring potential,
+etc.
+, are also considered in the process. Indeed, science is based upon systems of reputation, which is typically estimated using cumulative measures
+19
+. However, evaluation criteria that are heavily weighted on cumulative achievement measures may reinforce stratification and cumulative advantage mechanisms in science
+20
+,
+21
+,
+22
+,
+23
+, which may inadvertently increase the risk burden of young careers
+24
+.
+Thus, we need to not only understand the success and attrition rates of scientific careers, but, it is critical to grasp the limits-of-prediction. In the past, research, and especially researchers, have been evaluated qualitatively but now quantitative approaches, based upon citation counts, are becoming increasingly common. Indeed they are now being used formally and informally in the career advancement process. Citation counts, like other science metrics, are just one of the many dimensions of academic success and have to be used together with, and not instead of other evaluations. Still, if one wants to use science metrics in real comparative career evaluations, it is necessary to account for their biases and possibly correct them
+25
+.
+Our analysis shows that for the purpose of predicting a scientist's future
+h
+-index linear regression models suffer a variety of flaws. Their performance strongly depends upon career age. Cumulative, nondecreasing, dependent variables contain an intrinsic correlation that makes
+R
+2
+a misleading measure of predictive power. Removing this correlation by reformulating the problem as one of predicting the
+h
+-index increase (Δ
+h
+) over a fixed time interval, and segregating the careers into different age cohorts, linear models do a poor job of predicting future impact. Finally, our effort to examine the correlation between the impact of a scientist's past papers and future papers shows there may be a relationship to be discovered, but doing so will require a highly sensitive and powerful approach.
+Despite these shortcomings, and in fairness to those that have broken this path, the real impact of these early models does not, necessarily, lie in their ability to predict future impact. A significant contribution has been made by turning the critical eye of the community on the issue of predicting future scientific impact, and a much larger set of issues surrounding the use of quantitative measures in the academic career advancement process. But much work remains to be done before predictive models of future impact come of age and there are several obvious directions for future inquiry. For example, how the weights of coefficients vary, across disciplines as well as career ages should be thoroughly studied. As well, other independent variables should be studied in detail, for example, what impact does advisor prestige have upon a scientist's future
+h
+-index.
+Of course, critical to all future efforts is the availability of high quality career data and some new, interesting, opportunities lie in that direction
+26
+. The questions that could drive the future research are: What would the perfect prediction model need to be capable of in order to be suitable for real world application? Further, what additional characteristics would it need to have to see widespread and responsible use?
+With regards to the first question, it is critical that efforts to model future research impact focus on the fact that we are not predicting an individual's future impact in a vacuum. The vast majority of ‘real’ world uses demand models be able to differentiate between researchers, to correctly rank them in order of their future impact. The capacity to produce a correct ranking, not just a number for each researcher, is really what is critical. Indeed it is advisable that future work on predicting future impact bypass
+R
+2
+all together in favor of ranking based measures of predictive power. Turning to the second question, it is important that these rankings must be highly precise and explicitly assign a confidence score to the order. It is also highly desirable that these models be easy to calibrate because, as shown above, it is not possible for a single set of parameters to transcend the wide range of citation, publishing,
+etc.
+behaviors known to exist between disciplines. Hence, ease of calibration would be particularly important for adoption in less quantitative disciplines. It is also important that the community develops models that are able to separately predict future impact arising from future citations to past papers, and future impact arising from future citations to future papers. This may seem a minor distinction, but it is really at the heart of many hires, a tenure track position being a good example. In that case a candidate whose
+h
+-index will increase due to work performed in the position is far more desirable than one whose
+h
+-index increases due to work performed previously, assuming they both end up with the same
+h
+-index.
+In closing, cumulative measures of future impact are not appropriate targets of predictive modeling because they contain trivial correlation by construction. We have provided significant evidence that the current predictive models for future impact possess far less predictive power than previously reported. Further, the next generation of efforts to predictively model future impact need aimed more directly at applications in the career advancement decision process.
+Methods
+Data description
+We analyzed the publication profiles for 762 scientists divided into 3 broad disciplines: 476 physicists, 236 cell biologists, and 50 pure mathematicians. The top-cited scientists in their respective field comprise the “prominent” scientist datasets. For each scientist we compiled his/her comprehensive publication and citation profile using the Thomson Reuters (formerly ISI) Web of Knowledge historical publication and conference proceedings database. For more information on author selection and disambiguation method, see the
+Supplementary Text
+.
+We also studied five different stock market indices each from a different country (a) S&P 500 from US (b) BSE Sensex from India (c) FTSE 100 from UK (d) BOVESPA from Brazil and (e) NIKKEI 225 from Japan. The data was downloaded from
+www.finance.yahoo.com
+and covers the period from October 1997 to September 2012.
+Elastic net regularization for linear regression
+When the independent variables of a linear regression model are correlated the estimated coefficients obtained by least-square method are highly sensitive to random errors in the observed response. To resolve this problem we use elastic-net regularization which is useful when there are multiple features which are correlated with one another (collinear)
+27
+. There are two parameters, the first one is the mixing parameter
+α
+, which controls the collinearity of the parameters, the second one is the regularization parameter
+λ
+, which controls the complexity of the model. In all our analysis we set
+α
+= 0.2, whereas the best
+λ
+is determined by cross-validation. We also checked that our results are qualitatively similar for other alpha values, say
+α
+= 0.1. More information on all aspects of the regression method can be found in the
+Supplementary Text
+.
+References
+van den Besselaar, P. & Leydesdorff, L. Past performance, peer review and project selection: a case study in the social and behavioral sciences.
+Research Evaluation
+18
+, 273–288 (2009).
+Article
+Google Scholar
+Stephan, P.
+How Economics Shapes Science
+(Harvard University Press, 2012), 1 edn.
+Book
+Google Scholar
+Moss-Racusin, C. A., Dovidio, J. F., Brescoll, V. L., Graham, M. J. & Handelsman, J. Science facultys subtle gender biases favor male students.
+Proc. Natl. Acad. Sci. U.S.A.
+109
+, 16474–16479 (2012).
+Article
+CAS
+ADS
+Google Scholar
+Ginther, D. K. & Kahn, S. Women in economic: Moving up or falling off the academic career ladder?
+J. Econ. Perspect.
+18
+, 193–214 (2004).
+Article
+Google Scholar
+Technical report by the Committee on Maximizing the Potential of Women in Academic Science and Engineering, National Academy of Sciences, National Academy of Engineering, and Institute of Medicine.
+Beyond Bias and Barriers: Fulfilling the Potential of Women in Academic Science and Engineering
+(National Academies Press, 2007).
+Duch, J. et al. The possible role of resource requirements and academic career-choice risk on gender differences in publication rate and impact.
+PLoS ONE
+7
+, e51332 (2012).
+Article
+CAS
+ADS
+Google Scholar
+Hirsch, J. E. An index to quantify an individual's scientific research output.
+Proc. Natl. Acad. Sci. U.S.A.
+102
+, 16569–16572 (2005).
+Article
+CAS
+ADS
+Google Scholar
+National agency for the evaluation of universities and research institutes (italy).
+www.anvur.org/sites/anvur-miur/files/normalizzazione_indicatori_0.pdf
+(2013). Accessed: 2013-02-01.
+Hirsch, J. E. Does the h index have predictive power?
+Proc. Natl. Acad. Sci. U.S.A.
+104
+, 19193–19198 (2007).
+Article
+CAS
+ADS
+Google Scholar
+Acuna, D. E., Allesina, S. & Kording, K. P. Future impact: Predicting scientific success.
+Nature
+489
+, 201–202 (2012).
+Article
+CAS
+ADS
+Google Scholar
+Penner, O., Petersen, A. M., Pan, R. K. & Fortunato, S. The case for caution in predicting scientists' future impact.
+Phys. Today
+66
+, 8–9 (2013).
+Article
+Google Scholar
+Schreiber, M. How relevant is the predictive power of the h-index? A case study of the time-dependent Hirsch index.
+J. Informetr.
+7
+, 325–329 (2013).
+Article
+Google Scholar
+Mazloumian, A. Predicting scholars' scientific impact.
+PLoS ONE
+7
+, e49246 (2012).
+Article
+CAS
+ADS
+Google Scholar
+Malkiel, B. G. The efficient market hypothesis and its critics.
+J. Econ. Perspect.
+17
+, 59–82 (2003).
+Article
+Google Scholar
+Mantegna, R. N. & Stanley, H. E.
+Introduction to Econophysics: Correlations and Complexity in Finance
+(Cambridge University Press, 1999), 1 edn.
+Book
+Google Scholar
+Long, J. S. Productivity and academic position in the scientific career.
+Am. Sociol. Rev.
+43
+, 889–908 (1978).
+Article
+Google Scholar
+Long, J. S., Allison, P. D. & McGinnis, R. Entrance into the academic career.
+Am. Sociol. Rev.
+44
+, 816–830 (1979).
+Article
+Google Scholar
+Malmgren, R., Ottino, J. & Amaral, L. The role of mentorship in protege performance.
+Nature
+463
+, 622–626 (2010).
+Article
+ADS
+Google Scholar
+Petersen, A. M. et al. Reputation and impact in academic careers.
+arXiv:1303.7274
+(2013).
+Cole, J. & Cole, S.
+Social Stratification in Science
+(University of Chicago Press, 1973).
+Google Scholar
+Hargens, L. L. & Felmlee, D. H. Structural determinants of stratification in science.
+Am. Sociol. Rev.
+49
+, 685–697 (1984).
+Article
+Google Scholar
+Jones, B. F., Wuchty, S. & Uzzi, B. Multi-university research teams: Shifting impact, geography, and stratification in science.
+Science
+322
+, 1259–1262 (2008).
+Article
+CAS
+ADS
+Google Scholar
+Petersen, A. M., Jung, W.-S., Yang, J.-S. & Stanley, H. E. Quantitative and empirical demonstration of the matthew effect in a study of career longevity.
+Proc. Natl. Acad. Sci. U.S.A.
+108
+, 18–23 (2011).
+Article
+CAS
+ADS
+Google Scholar
+Petersen, A. M., Riccaboni, M., Stanley, H. E. & Pammolli, F. Persistence and uncertainty in the academic career.
+Proc. Natl. Acad. Sci. U.S.A.
+109
+, 5213–5218 (2012).
+Article
+CAS
+ADS
+Google Scholar
+Radicchi, F., Fortunato, S. & Castellano, C. Universality of citation distributions: Toward an objective measure of scientific impact.
+Proc. Natl. Acad. Sci. U.S.A.
+105
+, 17268–17272 (2008).
+Article
+CAS
+ADS
+Google Scholar
+Orcid.
+www.orcid.org
+(2013). Accessed: 2013-02-01.
+Zou, H. & Hastie, T. Regularization and variable selection via the elastic net.
+J. Roy. Stat. Soc. B
+67
+, 301–320 (2005).
+Article
+MathSciNet
+Google Scholar
+Google trend data for “h-index”.
+www.google.com/trends/explore?
+q = h-index&cmpt = q (2013). Accessed: 2013-02-01.
+Download references
+Acknowledgements
+O.P. acknowledges funding from the Social Sciences and Humanities Research Council of Canada. Certain data included herein are derived from the Science Citation Index Expanded, Social Science Citation Index and Arts & Humanities Citation Index, prepared by Thomson Reuters, Philadelphia, Pennsylvania, USA, Copyright Thomson Reuters, 2011.
+Author information
+Author notes
+Orion Penner and Raj K. Pan: These authors contributed equally to this work.
+Authors and Affiliations
+Laboratory of Innovation Management and Economics, IMT Institute for Advanced Studies Lucca, 55100 Lucca, Italy,
+Orion Penner
+Department of Biomedical Engineering and Computational Science, Aalto University School of Science, P.O. Box 12200, FI-00076, Finland,
+Raj K. Pan, Kimmo Kaski & Santo Fortunato
+Laboratory for the Analysis of Complex Economic Systems, IMT Institute for Advanced Studies Lucca, 55100 Lucca, Italy,
+Alexander M. Petersen
+Authors
+Orion Penner
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Raj K. Pan
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Alexander M. Petersen
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Kimmo Kaski
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Santo Fortunato
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Contributions
+O.P., R.K.P., A.M.P., K.K. and S.F. designed the research and participated in the writing of the manuscript. O.P., R.K.P. and A.M.P. collected the data, analysed the data and performed the research.
+Corresponding authors
+Correspondence to
+Alexander M. Petersen
+or
+Santo Fortunato
+.
+Ethics declarations
+Competing interests
+The authors declare no competing financial interests.
+Supplementary information
+Supplementary Information (download PDF
+)
+Supplementary Information (PDF 554 kb)
+Rights and permissions
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareALike 3.0 Unported License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+Reprints and permissions
+About this article
+Cite this article
+Penner, O., Pan, R., Petersen, A.
+et al.
+On the Predictability of Future Impact in Science.
+Sci Rep
+3
+, 3052 (2013). https://doi.org/10.1038/srep03052
+Download citation
+Received
+:
+15 August 2013
+Accepted
+:
+09 October 2013
+Published
+:
+29 October 2013
+DOI
+:
+https://doi.org/10.1038/srep03052
+Share this article
+Anyone you share the following link with will be able to read this content:
+Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Download PDF
+Advertisement
+Explore content
+Research articles
+News & Comment
+Collections
+Subjects
+Follow us on Facebook
+Follow us on X
+Sign up for alerts
+RSS feed
+About the journal
+About Scientific Reports
+Contact
+Editors
+Journal policies
+Guide to referees
+Calls for Papers
+Editor's Choice
+Journal highlights
+Open Access Fees and Funding
+Publish with us
+For authors
+Language editing services
+Open access funding
+Submit manuscript
+Search
+Search articles by subject, keyword or author
+Show results from
+All journals
+This journal
+Search
+Advanced search
+Quick links
+Explore articles by subject
+Find a job
+Guide to authors
+Editorial policies
+Scientific Reports
+(
+Sci Rep
+)
+ISSN
+2045-2322
+(online)
+nature.com footer links
+About Nature Portfolio
+About us
+Press releases
+Press office
+Contact us
+Discover content
+Journals A-Z
+Articles by subject
+protocols.io
+Nature Index
+Publishing policies
+Nature portfolio policies
+Open access
+Author & Researcher services
+Reprints & permissions
+Research data
+Language editing
+Scientific editing
+Nature Masterclasses
+Research Solutions
+Libraries & institutions
+Librarian service & tools
+Librarian portal
+Open research
+Recommend to library
+Advertising & partnerships
+Advertising
+Partnerships & Services
+Media kits
+Branded content
+Professional development
+Nature Awards
+Nature Careers
+Nature
+Conferences
+Regional websites
+Nature Africa
+Nature China
+Nature India
+Nature Japan
+Nature Middle East
+Privacy Policy
+Use of cookies
+Your privacy choices/Manage cookies
+Legal notice
+Accessibility statement
+Terms & Conditions
+Your US state privacy rights
+© 2026 Springer Nature Limited
+Close banner
+Close
+Sign up for the
+Nature Briefing: AI and Robotics
+newsletter — what matters in AI and robotics research, free to your inbox weekly.
+Email address
+Sign up
+I agree my information will be processed in accordance with the
+Nature
+and Springer Nature Limited
+Privacy Policy
+.
+Close banner
+Close
+Get the most important science stories of the day, free in your inbox.
+Sign up for Nature Briefing: AI and Robotics

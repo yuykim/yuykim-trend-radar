@@ -1,0 +1,68 @@
+[
+  {
+    "name": "A-krenn",
+    "url": "https://arxiv.org/pdf/2210.00881",
+    "final_url": "https://arxiv.org/pdf/2210.00881",
+    "file": "A-krenn.pdf",
+    "bytes": 1844798,
+    "sha256": "88a48f8de98e000b2ad381838f9106a1a8344247b79b63e01f50f2fee346ec46"
+  },
+  {
+    "name": "A-augur",
+    "url": "https://oro.open.ac.uk/54345/1/JCDL2018_v49ANG.pdf",
+    "error": "403 Client Error: Forbidden for url: https://oro.open.ac.uk/54345/1/JCDL2018_v49ANG.pdf"
+  },
+  {
+    "name": "A-growth",
+    "url": "https://arxiv.org/pdf/2004.13159",
+    "final_url": "https://arxiv.org/pdf/2004.13159",
+    "file": "A-growth.pdf",
+    "bytes": 1295385,
+    "sha256": "70b1c3af36ff1c08c96073454f63a8e63f754e81e1195713b1c19f258fced2e7"
+  },
+  {
+    "name": "A-small",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0048733314000298",
+    "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0048733314000298"
+  },
+  {
+    "name": "A-eysenbach",
+    "url": "https://www.jmir.org/2011/4/e123/",
+    "final_url": "https://www.jmir.org/2011/4/e123/",
+    "file": "A-eysenbach.html",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "A-costas",
+    "url": "https://arxiv.org/abs/1401.4321",
+    "final_url": "https://arxiv.org/abs/1401.4321",
+    "file": "A-costas.html",
+    "bytes": 44444,
+    "sha256": "88f88797f82ec1d89147af0d8e538616b9646aef3041dc4efe158de61f792ca7"
+  },
+  {
+    "name": "A-penner",
+    "url": "https://www.nature.com/articles/srep03052",
+    "final_url": "https://www.nature.com/articles/srep03052",
+    "file": "A-penner.html",
+    "bytes": 329916,
+    "sha256": "e11b0d66af21369f5326a15cc53e66f003e222a2ce6fcb317b70fa50156ec94a"
+  },
+  {
+    "name": "A-hype",
+    "url": "https://doi.org/10.1016/j.techfore.2016.04.005",
+    "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0040162516300270",
+    "file": "A-hype.html",
+    "bytes": 2667,
+    "sha256": "7f5460c12fe0924f70e0d4adc2fc51f9a594b3a603580633713705c28dbc22fc"
+  },
+  {
+    "name": "A-lag",
+    "url": "https://hci.stanford.edu/publications/2023/hcitransfer-chi-2023.pdf",
+    "final_url": "https://hci.stanford.edu/publications/2023/hcitransfer-chi-2023.pdf",
+    "file": "A-lag.pdf",
+    "bytes": 7575067,
+    "sha256": "abffac1f34fe315a0a410c0f20f4fbfe27ec950ef3474f0e5a4fa05e48a3e054"
+  }
+]

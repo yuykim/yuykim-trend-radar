@@ -1,0 +1,182 @@
+[
+  {
+    "id": "A01",
+    "source": "S01",
+    "quote": "Multiple interactive visualization interfaces that integrate these results together to assist human analysts are developed.",
+    "source_text": "sources/A-horizon.md",
+    "line_numbers": [
+      "41"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Multiple interactive visualization interfaces that integrate these results together to assist human analysts are developed.",
+      "sources/A-horizon.md"
+    ],
+    "match_count": 1,
+    "quote_words": 15
+  },
+  {
+    "id": "A02",
+    "source": "S02",
+    "quote": "Thus, whether a topic can be considered as emergent depends on the choice of the parameter values.",
+    "source_text": "sources/A-wang.md",
+    "line_numbers": [
+      "166"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Thus, whether a topic can be considered as emergent depends on the choice of the parameter values.",
+      "sources/A-wang.md"
+    ],
+    "match_count": 1,
+    "quote_words": 17
+  },
+  {
+    "id": "A03",
+    "source": "S03",
+    "quote": "Given this value, precision stays high (0.6-0.71) for the years from 1999 to 2005, while recall is in the range 0.43 to 0.63.",
+    "source_text": "sources/A-augur.md",
+    "line_numbers": [
+      "3321"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Given this value, precision stays high (0.6-0.71) for the years from 1999 to 2005, while recall is in the range 0.43 to 0.63.",
+      "sources/A-augur.md"
+    ],
+    "match_count": 1,
+    "quote_words": 23
+  },
+  {
+    "id": "A04",
+    "source": "S04",
+    "quote": "Pure ML methods were not yet able to outperform those that use hand-crafted features.",
+    "source_text": "sources/A-krenn.md",
+    "line_numbers": [
+      "171"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Pure ML methods were not yet able to outperform those that use hand-crafted features.",
+      "sources/A-krenn.md"
+    ],
+    "match_count": 1,
+    "quote_words": 14
+  },
+  {
+    "id": "A05",
+    "source": "S05",
+    "quote": "When all RCs are included, neither model reaches the 25% CSI threshold in any year.",
+    "source_text": "sources/A-growth.md",
+    "line_numbers": [
+      "326"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "When all RCs are included, neither model reaches the 25% CSI threshold in any year.",
+      "sources/A-growth.md"
+    ],
+    "match_count": 1,
+    "quote_words": 15
+  },
+  {
+    "id": "A06",
+    "source": "S06",
+    "quote": "Top-cited articles can be predicted from top-tweeted articles with 93% specificity and 75% sensitivity.",
+    "source_text": "sources/A-eysenbach-pmc.txt",
+    "line_numbers": [
+      "108"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Top-cited articles can be predicted from top-tweeted articles with 93% specificity and 75% sensitivity.",
+      "sources/A-eysenbach-pmc.txt"
+    ],
+    "match_count": 1,
+    "quote_words": 14
+  },
+  {
+    "id": "A07",
+    "source": "S07",
+    "quote": "Previous results are quite consistent and indicate a positive but weak correlation between altmetrics and citations.",
+    "source_text": "sources/A-costas-full.md",
+    "line_numbers": [
+      "264"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "Previous results are quite consistent and indicate a positive but weak correlation between altmetrics and citations.",
+      "sources/A-costas-full.md"
+    ],
+    "match_count": 1,
+    "quote_words": 16
+  },
+  {
+    "id": "A08",
+    "source": "S08",
+    "quote": "We have provided significant evidence that the current predictive models for future impact possess far less predictive power than previously reported.",
+    "source_text": "sources/A-penner.txt",
+    "line_numbers": [
+      "827"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "We have provided significant evidence that the current predictive models for future impact possess far less predictive power than previously reported.",
+      "sources/A-penner.txt"
+    ],
+    "match_count": 1,
+    "quote_words": 21
+  },
+  {
+    "id": "A09",
+    "source": "S09",
+    "quote": "However, the time lag between patent and paper is long (>10 years) and getting longer, suggesting HCI research and practice may be inefficiently connected.",
+    "source_text": "sources/A-lag.md",
+    "line_numbers": [
+      "449"
+    ],
+    "exit_code": 0,
+    "command": [
+      "rg",
+      "--fixed-strings",
+      "--line-number",
+      "--",
+      "However, the time lag between patent and paper is long (>10 years) and getting longer, suggesting HCI research and practice may be inefficiently connected.",
+      "sources/A-lag.md"
+    ],
+    "match_count": 1,
+    "quote_words": 24
+  }
+]

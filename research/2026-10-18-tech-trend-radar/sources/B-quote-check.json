@@ -1,0 +1,142 @@
+[
+  {
+    "id": "B01",
+    "file": "B-S01-eysenbach.search.txt",
+    "quote": "Tweets can predict highly cited articles within the first 3 days of article publication.",
+    "status": "PASS",
+    "match": "1:Tweets can predict highly cited articles within the first 3 days of article publication."
+  },
+  {
+    "id": "B02",
+    "file": "B-S01-eysenbach.search.txt",
+    "quote": "less clear for Scopus citations and rank correlations.",
+    "status": "PASS",
+    "match": "1:less clear for Scopus citations and rank correlations."
+  },
+  {
+    "id": "B03",
+    "file": "B-S02-haustein.search.txt",
+    "quote": "correlations between tweets and citations are low",
+    "status": "PASS",
+    "match": "1:correlations between tweets and citations are low"
+  },
+  {
+    "id": "B04",
+    "file": "B-S03-bots.search.txt",
+    "quote": "at least amount to 9% of tweets",
+    "status": "PASS",
+    "match": "1:at least amount to 9% of tweets"
+  },
+  {
+    "id": "B05",
+    "file": "B-S03-bots.search.txt",
+    "quote": "Only three accounts were considered more likely to be bots than humans.",
+    "status": "PASS",
+    "match": "1:Only three accounts were considered more likely to be bots than humans."
+  },
+  {
+    "id": "B06",
+    "file": "B-S04-x-pricing.search.txt",
+    "quote": "The X API uses pay-per-usage pricing.",
+    "status": "PASS",
+    "match": "1:The X API uses pay-per-usage pricing."
+  },
+  {
+    "id": "B06",
+    "file": "B-S04-x-pricing.search.txt",
+    "quote": "Posts: Read $0.005 per resource",
+    "status": "PASS",
+    "match": "1:Posts: Read $0.005 per resource"
+  },
+  {
+    "id": "B07",
+    "file": "B-S05-reddit-2023.search.txt",
+    "quote": "the rate for third-party apps that require higher usage limits is $0.24 per 1K API calls.",
+    "status": "PASS",
+    "match": "1:the rate for third-party apps that require higher usage limits is $0.24 per 1K API calls."
+  },
+  {
+    "id": "B08",
+    "file": "B-S06-reddit-current.search.txt",
+    "quote": "100 queries per minute (QPM) per OAuth client id",
+    "status": "PASS",
+    "match": "1:100 queries per minute (QPM) per OAuth client id"
+  },
+  {
+    "id": "B08",
+    "file": "B-S06-reddit-current.search.txt",
+    "quote": "Traffic not using OAuth or login credentials will be blocked",
+    "status": "PASS",
+    "match": "1:Traffic not using OAuth or login credentials will be blocked"
+  },
+  {
+    "id": "B09",
+    "file": "B-S07-bloom.search.txt",
+    "quote": "We identify novel technologies using textual analysis of patents, job postings, and earnings calls.",
+    "status": "PASS",
+    "match": "1:We identify novel technologies using textual analysis of patents, job postings, and earnings calls."
+  },
+  {
+    "id": "B10",
+    "file": "B-S07-bloom.search.txt",
+    "quote": "a false positive rate of about 10-20%.",
+    "status": "PASS",
+    "match": "1:a false positive rate of about 10-20%."
+  },
+  {
+    "id": "B11",
+    "file": "B-S07-bloom.search.txt",
+    "quote": "peak year",
+    "status": "PASS",
+    "match": "1:peak year\n1:peak year\n1:peak year"
+  },
+  {
+    "id": "B12",
+    "file": "B-S08-mantegna.search.txt",
+    "quote": "a meaningful economic taxonomy.",
+    "status": "PASS",
+    "match": "1:a meaningful economic taxonomy."
+  },
+  {
+    "id": "B13",
+    "file": "B-S08-mantegna.search.txt",
+    "quote": "economic factors which are specific to the considered group",
+    "status": "PASS",
+    "match": "1:economic factors which are specific to the considered group"
+  },
+  {
+    "id": "B14",
+    "file": "B-S09-etf.search.txt",
+    "quote": "over their first five years, specialized ETFs lose about 30% in risk-adjusted terms.",
+    "status": "PASS",
+    "match": "1:over their first five years, specialized ETFs lose about 30% in risk-adjusted terms."
+  },
+  {
+    "id": "B15",
+    "file": "B-S09-etf.search.txt",
+    "quote": "overvaluation of the underlying stocks",
+    "status": "PASS",
+    "match": "1:overvaluation of the underlying stocks"
+  },
+  {
+    "id": "B16",
+    "file": "B-S10-code.search.txt",
+    "quote": "papers enjoy approximately 20% advantages in monthly citation rates",
+    "status": "PASS",
+    "match": "1:papers enjoy approximately 20% advantages in monthly citation rates"
+  },
+  {
+    "id": "B17",
+    "file": "B-S10-code.search.txt",
+    "quote": "could influence the monthly citation rate for papers.",
+    "status": "PASS",
+    "match": "1:could influence the monthly citation rate for papers."
+  },
+  {
+    "id": "B18",
+    "file": "B-S10-code.search.txt",
+    "quote": "estimated effect sizes may vary",
+    "status": "PASS",
+    "match": "1:estimated effect sizes may vary"
+  }
+]

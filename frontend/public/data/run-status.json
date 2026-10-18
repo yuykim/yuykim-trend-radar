@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-10-18T13:21:41.709411+00:00",
+  "collection_cutoff": "2026-10-17T22:00:00+00:00",
+  "collected": 0,
+  "visible_documents": 0,
+  "demo": true,
+  "source_runs": [
+    {
+      "source": "arxiv",
+      "started_at": "2026-10-18T13:21:32.508509Z",
+      "finished_at": "2026-10-18T13:21:41.663189Z",
+      "status": "failed",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "item_count": 0,
+      "error_code": "network_error"
+    },
+    {
+      "source": "openreview",
+      "started_at": "2026-10-18T13:21:41.691403Z",
+      "finished_at": "2026-10-18T13:21:41.691410Z",
+      "status": "disabled",
+      "coverage_id": null,
+      "item_count": 0,
+      "error_code": "config_disabled"
+    },
+    {
+      "source": "openalex",
+      "started_at": "2026-10-18T13:21:41.702995Z",
+      "finished_at": "2026-10-18T13:21:41.702999Z",
+      "status": "disabled",
+      "coverage_id": null,
+      "item_count": 0,
+      "error_code": "config_disabled"
+    }
+  ],
+  "llm": "disabled"
+}

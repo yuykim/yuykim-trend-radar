@@ -1,0 +1,40 @@
+{
+  "entity_id": "jepa",
+  "label": "JEPA",
+  "aliases": [],
+  "documents": [
+    {
+      "id": "doc-jepa",
+      "source": "demo",
+      "source_id": "demo-jepa",
+      "canonical_id": "demo-jepa",
+      "title": "JEPA 데모 문헌",
+      "abstract": "합성 데모 초록입니다. 실제 논문이나 검증된 실험 결과가 아닙니다.",
+      "url": "https://example.org/radar/jepa",
+      "version": "v1",
+      "published_at": "2026-10-09T00:00:00Z",
+      "first_public_at": null,
+      "observed_at": "2026-10-12T01:00:00Z",
+      "available_at": "2026-10-12T01:00:00Z",
+      "status": "preprint"
+    }
+  ],
+  "observations": [
+    {
+      "entity_id": "jepa",
+      "metric": "research_share_28d",
+      "value": null,
+      "available_at": "2026-10-17T22:00:00Z",
+      "observed_at": "2026-10-17T22:00:00Z",
+      "source": "openreview",
+      "coverage_id": "demo-physical-ai-v1",
+      "state": "missing"
+    }
+  ],
+  "evidence_edges": [],
+  "limitations": [
+    "DEMO · 합성 데이터. 실제 연구 평가에 사용할 수 없습니다.",
+    "초록만 확인하는 예시이며 본문·코드·모델·재현성은 미확인입니다."
+  ],
+  "summary": null
+}

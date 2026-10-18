@@ -1,0 +1,15 @@
+version: 1
+# Set an aware UTC timestamp BEFORE the first prospective exposure. Never backfill.
+prospective_start: null
+duration_weeks: 4
+max_candidates_per_day: 5
+baseline: chronological_seed_keyword_feed_same_corpus
+additional_baseline: chronological_broad_feed_same_corpus
+review: blinded_scores_and_arm_assignment
+insufficient_sample: inconclusive
+go_criteria:
+  core_collection_success_rate_min: 0.95
+  precision_at_5_improvement_min: 0.10
+  unknown_useful_candidates_per_week_min: 2
+  matched_median_lead_days_min: 1
+  median_daily_review_minutes_max: 10

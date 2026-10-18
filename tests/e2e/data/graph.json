@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "world",
+      "label": "World Models",
+      "type": "topic"
+    },
+    {
+      "id": "jepa",
+      "label": "JEPA",
+      "type": "technology"
+    },
+    {
+      "id": "tactile",
+      "label": "Tactile Learning",
+      "type": "technology"
+    },
+    {
+      "id": "vla",
+      "label": "VLA",
+      "type": "technology"
+    }
+  ],
+  "edges": [{
+    "id": "synthetic-e2e-edge",
+    "source_id": "world",
+    "target_id": "vla",
+    "relation": "uses",
+    "evidence_url": "https://example.org/radar/synthetic-e2e",
+    "evidence_location": "Synthetic E2E fixture; not real research evidence",
+    "available_at": "2026-10-17T22:00:00Z",
+    "review_status": "proposed"
+  }],
+  "generated_at": "2026-10-17T22:00:00Z"
+}

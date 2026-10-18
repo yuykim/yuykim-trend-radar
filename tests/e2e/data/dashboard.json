@@ -1,0 +1,122 @@
+{
+  "as_of": "2026-10-17T22:00:00Z",
+  "trends": [
+    {
+      "entity_id": "world",
+      "count_28d": 12,
+      "share_28d": 0.24,
+      "share_change": 0.04,
+      "support": "ok",
+      "coverage_id": "demo-physical-ai-v1",
+      "evidence_ids": [
+        "doc-world"
+      ]
+    },
+    {
+      "entity_id": "jepa",
+      "count_28d": 0,
+      "share_28d": null,
+      "share_change": null,
+      "support": "missing",
+      "coverage_id": "demo-physical-ai-v1",
+      "evidence_ids": [
+        "doc-jepa"
+      ]
+    },
+    {
+      "entity_id": "tactile",
+      "count_28d": 3,
+      "share_28d": 0.06,
+      "share_change": null,
+      "support": "low_support",
+      "coverage_id": "demo-physical-ai-v1",
+      "evidence_ids": [
+        "doc-tactile"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-tactile",
+      "entity_id": "tactile",
+      "kind": "new_combination",
+      "first_seen_at": "2026-10-12T01:00:00Z",
+      "reasons": [
+        "데모: seed 외 조합 후보. 이름만으로 신규성을 확정하지 않습니다."
+      ],
+      "evidence_ids": [
+        "doc-tactile"
+      ],
+      "review_status": "proposed",
+      "summary": {
+        "why_new": "데모: 촉각과 시각 표현을 함께 학습하는 조합을 검토합니다.",
+        "difference": "데모: 시각 중심 접근과 센서 조건을 비교해야 합니다.",
+        "limitations": [
+          "합성 예시이며 실제 연구 결과가 아닙니다.",
+          "센서 간 전이와 재현성은 미확인입니다."
+        ],
+        "model": "demo-not-an-api-call",
+        "generated_at": "2026-10-17T22:00:00Z",
+        "source_document_ids": [
+          "doc-tactile"
+        ]
+      }
+    }
+  ],
+  "community_candidates": [],
+  "growth_watchlist": [
+    {
+      "id": "candidate-vla",
+      "entity_id": "vla",
+      "kind": "new_cluster",
+      "first_seen_at": "2026-10-10T01:00:00Z",
+      "reasons": [
+        "데모 관찰 feature: 연구 비중 변화.",
+        "독립 연구기관 수, 코드·모델 공개 상태는 미확인입니다."
+      ],
+      "evidence_ids": [
+        "doc-vla"
+      ],
+      "review_status": "proposed",
+      "summary": null
+    }
+  ],
+  "source_runs": [
+    {
+      "source": "arxiv",
+      "started_at": "2026-10-17T21:55:00Z",
+      "finished_at": "2026-10-17T22:00:00Z",
+      "status": "ok",
+      "coverage_id": "demo-physical-ai-v1",
+      "item_count": 20,
+      "error_code": null
+    },
+    {
+      "source": "openreview",
+      "started_at": "2026-10-17T21:55:00Z",
+      "finished_at": "2026-10-17T22:00:00Z",
+      "status": "failed",
+      "coverage_id": "demo-physical-ai-v1",
+      "item_count": 0,
+      "error_code": "demo_timeout"
+    },
+    {
+      "source": "openreview",
+      "started_at": "2026-10-16T21:55:00Z",
+      "finished_at": "2026-10-16T22:00:00Z",
+      "status": "ok",
+      "coverage_id": "demo-physical-ai-v1",
+      "item_count": 10,
+      "error_code": null
+    },
+    {
+      "source": "bluesky",
+      "started_at": "2026-10-17T22:00:00Z",
+      "finished_at": null,
+      "status": "disabled",
+      "coverage_id": null,
+      "item_count": 0,
+      "error_code": null
+    }
+  ]
+}

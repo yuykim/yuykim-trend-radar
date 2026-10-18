@@ -1,0 +1,5 @@
+﻿provider: google
+model: gemini-3.8-flash
+api_key_env: GEMINI_API_KEY
+max_calls_per_run: 30
+min_request_interval_seconds: 2

@@ -1,0 +1,812 @@
+[
+  {
+    "fixture_id": "synthetic-01",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-01",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-01",
+      "canonical_id": "canonical-01",
+      "title": "Robot learning survey",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-01",
+      "version": null,
+      "published_at": "2026-09-02T00:00:00Z",
+      "first_public_at": "2026-09-02T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-02",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-02",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-02",
+      "canonical_id": "canonical-02",
+      "title": "VLA for mobile manipulation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-02",
+      "version": null,
+      "published_at": "2026-09-03T00:00:00Z",
+      "first_public_at": "2026-09-03T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-03",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-03",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-03",
+      "canonical_id": "canonical-03",
+      "title": "World models for robot planning",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-03",
+      "version": null,
+      "published_at": "2026-09-04T00:00:00Z",
+      "first_public_at": "2026-09-04T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-04",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-04",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-04",
+      "canonical_id": "canonical-04",
+      "title": "JEPA representations for control",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-04",
+      "version": null,
+      "published_at": "2026-09-05T00:00:00Z",
+      "first_public_at": "2026-09-05T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-05",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-05",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-05",
+      "canonical_id": "canonical-05",
+      "title": "Tactile feedback in dexterous grasping",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-05",
+      "version": null,
+      "published_at": "2026-09-06T00:00:00Z",
+      "first_public_at": "2026-09-06T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-06",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-06",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-06",
+      "canonical_id": "canonical-06",
+      "title": "Sim-to-real transfer benchmark",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-06",
+      "version": null,
+      "published_at": "2026-09-07T00:00:00Z",
+      "first_public_at": "2026-09-07T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-07",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-07",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-07",
+      "canonical_id": "canonical-07",
+      "title": "Language-conditioned robot policies",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-07",
+      "version": null,
+      "published_at": "2026-09-08T00:00:00Z",
+      "first_public_at": "2026-09-08T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-08",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "known",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-08",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-08",
+      "canonical_id": "canonical-08",
+      "title": "Imitation learning from demonstrations",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-08",
+      "version": null,
+      "published_at": "2026-09-09T00:00:00Z",
+      "first_public_at": "2026-09-09T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-09",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "known",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-09",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-09",
+      "canonical_id": "canonical-09",
+      "title": "Offline reinforcement learning for robots",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-09",
+      "version": null,
+      "published_at": "2026-09-10T00:00:00Z",
+      "first_public_at": "2026-09-10T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-10",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-10",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-10",
+      "canonical_id": "canonical-10",
+      "title": "Visuomotor policy adaptation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-10",
+      "version": null,
+      "published_at": "2026-09-11T00:00:00Z",
+      "first_public_at": "2026-09-11T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-11",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-11",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-11",
+      "canonical_id": "canonical-11",
+      "title": "A robot foundation model",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-11",
+      "version": null,
+      "published_at": "2026-09-12T00:00:00Z",
+      "first_public_at": "2026-09-12T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-12",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-12",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-12",
+      "canonical_id": "canonical-12",
+      "title": "Embodied intelligence evaluation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-12",
+      "version": null,
+      "published_at": "2026-09-13T00:00:00Z",
+      "first_public_at": "2026-09-13T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-13",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "known",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-13",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-13",
+      "canonical_id": "canonical-13",
+      "title": "Legged locomotion control",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-13",
+      "version": null,
+      "published_at": "2026-09-14T00:00:00Z",
+      "first_public_at": "2026-09-14T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-14",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-14",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-14",
+      "canonical_id": "canonical-14",
+      "title": "Bimanual assembly with VLA",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-14",
+      "version": null,
+      "published_at": "2026-09-15T00:00:00Z",
+      "first_public_at": "2026-09-15T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-15",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-15",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-15",
+      "canonical_id": "canonical-15",
+      "title": "Open-vocabulary grasping",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-15",
+      "version": null,
+      "published_at": "2026-09-16T00:00:00Z",
+      "first_public_at": "2026-09-16T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-16",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "known",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-16",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-16",
+      "canonical_id": "canonical-16",
+      "title": "Neural rendering for manipulation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-16",
+      "version": null,
+      "published_at": "2026-09-17T00:00:00Z",
+      "first_public_at": "2026-09-17T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-17",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-17",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-17",
+      "canonical_id": "canonical-17",
+      "title": "Robot policy distillation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-17",
+      "version": null,
+      "published_at": "2026-09-18T00:00:00Z",
+      "first_public_at": "2026-09-18T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-18",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": true,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-18",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-18",
+      "canonical_id": "canonical-18",
+      "title": "A new tactile sensor dataset",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-18",
+      "version": null,
+      "published_at": "2026-09-19T00:00:00Z",
+      "first_public_at": "2026-09-19T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-19",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "known",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-19",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-19",
+      "canonical_id": "canonical-19",
+      "title": "Learning contact-rich skills",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-19",
+      "version": null,
+      "published_at": "2026-09-20T00:00:00Z",
+      "first_public_at": "2026-09-20T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-20",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-20",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-20",
+      "canonical_id": "canonical-20",
+      "title": "A survey of autonomous driving",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-20",
+      "version": null,
+      "published_at": "2026-09-21T00:00:00Z",
+      "first_public_at": "2026-09-21T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-21",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-21",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-21",
+      "canonical_id": "canonical-21",
+      "title": "Text-only language model benchmark",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-21",
+      "version": null,
+      "published_at": "2026-09-22T00:00:00Z",
+      "first_public_at": "2026-09-22T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-22",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-22",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-22",
+      "canonical_id": "canonical-22",
+      "title": "Medical image segmentation",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-22",
+      "version": null,
+      "published_at": "2026-09-23T00:00:00Z",
+      "first_public_at": "2026-09-23T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-23",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-23",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-23",
+      "canonical_id": "canonical-23",
+      "title": "Generic image classification",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-23",
+      "version": null,
+      "published_at": "2026-09-24T00:00:00Z",
+      "first_public_at": "2026-09-24T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-24",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-24",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-24",
+      "canonical_id": "canonical-24",
+      "title": "Financial time-series forecasting",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-24",
+      "version": null,
+      "published_at": "2026-09-25T00:00:00Z",
+      "first_public_at": "2026-09-25T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-25",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "duplicate",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-25",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-25",
+      "canonical_id": "canonical-25",
+      "title": "A duplicate version of robot learning survey",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-25",
+      "version": null,
+      "published_at": "2026-09-26T00:00:00Z",
+      "first_public_at": "2026-09-26T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-26",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "duplicate",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-26",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-26",
+      "canonical_id": "canonical-26",
+      "title": "Workshop reprint of VLA paper",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-26",
+      "version": null,
+      "published_at": "2026-09-27T00:00:00Z",
+      "first_public_at": "2026-09-27T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-27",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "synonym",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-27",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-27",
+      "canonical_id": "canonical-27",
+      "title": "Sim2Real spelling variant",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-27",
+      "version": null,
+      "published_at": "2026-09-28T00:00:00Z",
+      "first_public_at": "2026-09-28T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-28",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": true,
+      "relevant": true,
+      "distinctness": "synonym",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-28",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-28",
+      "canonical_id": "canonical-28",
+      "title": "Vision language action acronym expansion",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-28",
+      "version": null,
+      "published_at": "2026-09-29T00:00:00Z",
+      "first_public_at": "2026-09-29T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-29",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": false,
+      "distinctness": "ambiguous_acronym",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-29",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-29",
+      "canonical_id": "canonical-29",
+      "title": "JEPA used for a different domain",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-29",
+      "version": null,
+      "published_at": "2026-09-30T00:00:00Z",
+      "first_public_at": "2026-09-30T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  },
+  {
+    "fixture_id": "synthetic-30",
+    "synthetic": true,
+    "retrospective": true,
+    "manual_review": {
+      "already_known": false,
+      "relevant": true,
+      "distinctness": "distinct",
+      "useful": false,
+      "reviewed_at": "2026-10-18T00:00:00Z"
+    },
+    "document": {
+      "id": "synthetic-30",
+      "source": "synthetic_fixture",
+      "source_id": "synthetic-30",
+      "canonical_id": "canonical-30",
+      "title": "Robot-learning without evaluation details",
+      "abstract": "Synthetic fixture record for deterministic contract and review-flow testing.",
+      "url": "https://example.org/fixture/synthetic-30",
+      "version": null,
+      "published_at": "2026-10-01T00:00:00Z",
+      "first_public_at": "2026-10-01T00:00:00Z",
+      "observed_at": "2026-10-18T00:00:00Z",
+      "available_at": "2026-10-18T00:00:00Z",
+      "status": "unknown"
+    }
+  }
+]

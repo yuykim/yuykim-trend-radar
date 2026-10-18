@@ -1,0 +1,39 @@
+﻿version: 1
+scope: Physical AI
+seed_topics:
+  - id: robot-learning
+    label: Robot Learning
+    aliases: [robot learning, robot-learning]
+  - id: vla
+    label: Vision-Language-Action
+    aliases: [vision-language-action, vision language action, VLA]
+  - id: world-model
+    label: World Model
+    aliases: [world model, world-model]
+  - id: jepa
+    label: Joint Embedding Predictive Architecture
+    aliases: [JEPA, joint embedding predictive architecture]
+related_terms:
+  - manipulation
+  - embodied intelligence
+  - sim-to-real
+  - visuomotor policy
+  - dexterous manipulation
+  - robot foundation model
+  - imitation learning
+  - reinforcement learning
+  - tactile sensing
+  - locomotion
+synonyms:
+  "vision language action": vla
+  "vision-language-action": vla
+  "joint embedding predictive architecture": jepa
+  "sim to real": sim-to-real
+unverified_venues:
+  - name: Robotics Research Digest Workshop
+    status: unverified
+    reason: Seed placeholder; verify official proceedings before treating as peer reviewed.
+limits:
+  max_candidates_per_run: 5
+  max_fixture_reviews: 30
+  minimum_support: 5

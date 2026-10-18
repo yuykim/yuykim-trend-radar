@@ -1,0 +1,18 @@
+﻿version: 1
+sources:
+  arxiv:
+    enabled: true
+    categories: [cs.RO, cs.AI, cs.CV, cs.LG]
+    lookback_months: 24
+    purpose: broad_discovery
+  openreview:
+    enabled: false
+    venues: []
+    note: Enable only after venue/API coverage is verified.
+  openalex:
+    enabled: false
+    purpose: citation_and_institution_enrichment
+    max_requests_per_run: 100
+coverage:
+  identifier: physical-ai-seed-v1
+  description: Initial Physical AI discovery scope; source coverage is not exhaustive.

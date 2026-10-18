@@ -3,6 +3,9 @@
 !.env.example
 .superpowers/
 __pycache__/
+.pytest_cache/
+.test-tmp/
+.uv-cache/
 *.py[cod]
 node_modules/
 .venv/
@@ -10,3 +13,6 @@ venv/
 .DS_Store
 Thumbs.db
 *.log
+*.db
+*.db-*
+.npm-cache/

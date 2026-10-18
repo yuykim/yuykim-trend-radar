@@ -1,4 +1,6 @@
 ﻿provider: google
+# Verified 2026-10-18: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
+# Free-tier input/output: https://ai.google.dev/gemini-api/docs/pricing
 model: gemini-3.8-flash
 api_key_env: GEMINI_API_KEY
 max_calls_per_run: 30

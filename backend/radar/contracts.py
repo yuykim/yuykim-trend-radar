@@ -79,6 +79,15 @@ class Trend(Contract):
     evidence_ids: list[str]
 
 
+class CandidateSummary(Contract):
+    why_new: str
+    difference: str
+    limitations: list[str]
+    model: str
+    generated_at: datetime
+    source_document_ids: list[str]
+
+
 class Candidate(Contract):
     id: str
     entity_id: str
@@ -87,6 +96,7 @@ class Candidate(Contract):
     reasons: list[str]
     evidence_ids: list[str]
     review_status: Literal["proposed", "verified", "rejected"]
+    summary: CandidateSummary | None = None
 
 
 class Review(Contract):
@@ -128,3 +138,4 @@ class TopicDetail(Contract):
     observations: list[Observation]
     evidence_edges: list[EvidenceEdge]
     limitations: list[str]
+    summary: CandidateSummary | None = None

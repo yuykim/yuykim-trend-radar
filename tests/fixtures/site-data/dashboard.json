@@ -1,0 +1,8 @@
+{
+  "as_of": "2026-10-18T00:00:00Z",
+  "trends": [{"entity_id": "sample", "count_28d": 1, "share_28d": null, "share_change": null, "support": "missing", "coverage_id": null, "evidence_ids": ["synthetic-doc"]}],
+  "candidates": [{"id": "synthetic-candidate", "entity_id": "sample", "kind": "new_term", "first_seen_at": "2026-10-18T00:00:00Z", "reasons": ["Synthetic fixture, not observed research evidence."], "evidence_ids": ["synthetic-doc"], "review_status": "proposed", "summary": null}],
+  "community_candidates": [],
+  "growth_watchlist": [],
+  "source_runs": [{"source": "synthetic", "started_at": "2026-10-18T00:00:00Z", "finished_at": "2026-10-18T00:00:00Z", "status": "failed", "coverage_id": null, "item_count": 0, "error_code": "synthetic_timeout"}]
+}

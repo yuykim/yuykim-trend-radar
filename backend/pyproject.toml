@@ -1,4 +1,4 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
@@ -7,7 +7,7 @@ name = "yuykim-trend-radar"
 version = "0.1.0"
 description = "Evidence-first personal Physical AI research trend radar"
 requires-python = ">=3.11"
-dependencies = ["pydantic>=2.7,<3", "PyYAML>=6.0,<7"]
+dependencies = ["pydantic>=2.7,<3", "PyYAML>=6.0,<7", "google-genai==1.75.0"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<9"]

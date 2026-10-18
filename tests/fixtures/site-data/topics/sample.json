@@ -1,0 +1,10 @@
+{
+  "entity_id": "sample",
+  "label": "Synthetic sample",
+  "aliases": [],
+  "documents": [{"id": "synthetic-doc", "source": "synthetic", "source_id": "synthetic-doc", "canonical_id": "synthetic-doc", "title": "Synthetic fixture only", "abstract": "Synthetic fixture, not observed research evidence.", "url": "https://example.org/synthetic-doc", "version": "v1", "published_at": "2026-10-18T00:00:00Z", "first_public_at": "2026-10-18T00:00:00Z", "observed_at": "2026-10-18T00:00:00Z", "available_at": "2026-10-18T00:00:00Z", "status": "unknown"}],
+  "observations": [],
+  "evidence_edges": [],
+  "limitations": ["Synthetic fixture only; collection coverage is missing."],
+  "summary": null
+}

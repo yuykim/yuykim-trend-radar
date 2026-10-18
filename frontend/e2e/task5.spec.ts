@@ -1,0 +1,56 @@
+import { expect, test } from '@playwright/test';
+
+test('summary → evidence → review → reload → export, keyboard focus', async ({ page }, testInfo) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('./');
+  await expect(page.getByRole('heading', { name: '다음 움직임의 단서.' })).toBeVisible();
+  const missing = page.getByRole('article', { name: 'JEPA', exact: true });
+  await expect(missing).toContainText('수집 누락');
+  await expect(missing).not.toContainText('0%');
+  await expect(page.getByText('openreview: 수집 실패')).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('desktop.png'), fullPage: true });
+  const card = page.getByRole('button', { name: 'Tactile Learning 상세 보기' }).first();
+  await card.click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.getByRole('link', { name: '촉각 학습 데모 문헌', exact: true })).toHaveAttribute('href', 'https://example.org/radar/tactile');
+  await expect(page.getByText('LLM 생성, 원문 확인 필요')).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('detail.png') });
+  await page.getByLabel('유용했나요?').selectOption('true');
+  await page.getByLabel('검토 시간 (분)').fill('2.5');
+  await page.getByRole('button', { name: '리뷰 저장', exact: true }).click();
+  await page.getByRole('button', { name: '☆ 관심 저장', exact: true }).click();
+  await page.keyboard.press('Escape');
+  await expect(card).toBeFocused();
+  await page.reload();
+  await page.getByRole('button', { name: /관심 목록/ }).click();
+  await page.getByRole('button', { name: 'Tactile Learning 상세 보기' }).first().click();
+  await expect(page.getByLabel('유용했나요?')).toHaveValue('true');
+  await expect(page.getByLabel('검토 시간 (분)')).toHaveValue('2.5');
+  await page.keyboard.press('Escape');
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: '리뷰 · 관심 JSON 내보내기' }).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe('yuykim-trend-radar-personal.json');
+  const stream = await file.createReadStream();
+  const chunks: Buffer[] = [];
+  for await (const chunk of stream!) chunks.push(chunk);
+  expect(JSON.parse(Buffer.concat(chunks).toString())).toMatchObject({ watchlist: ['tactile'], reviews: [{ candidate_id: 'candidate-tactile', useful: true, relevant: null, minutes_spent: 2.5 }] });
+  expect(errors).toEqual([]);
+});
+
+test('mobile layout, alias search, empty state and graph placeholder', async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('./');
+  await expect(page.getByRole('button', { name: 'World Models 상세 보기' })).toBeVisible();
+  await page.getByRole('searchbox').fill('촉각 학습');
+  await expect(page.getByRole('button', { name: 'World Models 상세 보기' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Tactile Learning 상세 보기' }).first()).toBeVisible();
+  await page.getByRole('searchbox').fill('no-match');
+  await expect(page.getByText('일치하는 기술이 없습니다.')).toBeVisible();
+  await page.getByRole('button', { name: '검색 · 필터 초기화' }).click();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: testInfo.outputPath('mobile.png'), fullPage: true });
+  await page.getByRole('button', { name: '기술 관계도', exact: true }).click();
+  await expect(page.getByRole('heading', { name: '기술 관계도를 준비하고 있습니다.' })).toBeVisible();
+});

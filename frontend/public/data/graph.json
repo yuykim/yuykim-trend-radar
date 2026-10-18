@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "world",
+      "label": "World Models",
+      "type": "technology"
+    },
+    {
+      "id": "jepa",
+      "label": "JEPA",
+      "type": "technology"
+    },
+    {
+      "id": "tactile",
+      "label": "Tactile Learning",
+      "type": "technology"
+    },
+    {
+      "id": "vla",
+      "label": "VLA",
+      "type": "technology"
+    }
+  ],
+  "edges": [],
+  "generated_at": "2026-10-17T22:00:00Z"
+}

@@ -1,12 +1,12 @@
-# Tech Trend Radar Implementation Plan
+# yuykim-trend-radar Implementation Plan
 
 > **For agentic workers:** Executed by my-team, wave by wave. Implement only your own task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 근거를 확인하며 현재 연구 동향과 새로운 기술 후보를 발견하는 개인용 Physical AI 레이더를 만든다.
 
-**Architecture:** Python 수집기가 시간·출처 이력을 SQLite에 저장하고 FastAPI가 근거·후보·graph를 제공한다. React 화면은 요약→상세와 zoom graph를 제공한다. 규칙 기반 순위화로 시작하고 실제 추가 발견 가치를 측정한다.
+**Architecture:** 서버는 없다. GitHub Actions에서 Python batch가 수집·분석·Gemini 요약을 수행해 SQLite(`data/radar.db`)에 이력을 저장하고, 정적 JSON을 export한다. React 정적 사이트가 이 JSON을 읽어 요약→상세와 zoom graph를 제공하며 GitHub Pages로 배포한다. 리뷰·관심 저장은 브라우저 localStorage에 둔다. 규칙 기반 순위화로 시작하고 실제 추가 발견 가치를 측정한다.
 
-**Tech Stack:** Python, FastAPI, SQLite, pytest; React, TypeScript, Vite, Cytoscape.js, Vitest, Playwright. 구현 시 공식 호환성을 확인해 버전과 lockfile을 고정한다.
+**Tech Stack:** Python, SQLite, pytest, google-genai(Gemini API); GitHub Actions, GitHub Pages; React, TypeScript, Vite, Cytoscape.js, Vitest, Playwright. 구현 시 공식 호환성을 확인해 버전과 lockfile을 고정한다.
 
 **Spec:** [기술 트렌드 레이더 설계](../specs/2026-10-18-tech-trend-radar.md). 근거: [결론](../../research/2026-10-18-tech-trend-radar/conclusion.md), [claims](../../research/2026-10-18-tech-trend-radar/claims.md).
 
@@ -14,23 +14,27 @@
 
 - 초기 도메인은 Physical AI, 사용자는 개인 1명이다.
 - 주가 예측·자동매매·주문 API는 구현 범위 밖이다.
-- 갱신 기준은 매일 07:00 Asia/Seoul이다.
+- 프로젝트·repo 이름은 `yuykim-trend-radar`이고 public repo다.
+- 갱신 기준은 매일 07:00 Asia/Seoul(cron `0 22 * * *` UTC)이며 `workflow_dispatch`로 수동 갱신을 지원한다.
+- 서버 프로세스는 없다. 배포물은 정적 파일뿐이다.
+- 화면 디자인과 흐름은 `prototype/`을 따른다.
+- LLM 요약은 Gemini API 무료 tier(Flash 계열, 모델명은 구현 시 공식 문서로 확인해 `config/llm.yml`에 고정)를 쓴다. key 이름은 `GEMINI_API_KEY`이며 로컬은 `.env`, CI는 GitHub secret에서만 읽는다. LLM이 실패·비활성이어도 원문 기반 화면은 동작해야 한다.
 - 미확인 값은 null/unknown, 수집 누락은 missing으로 보존한다.
 - 모든 후보와 관계는 source URL·기준 시점·검토 상태로 추적할 수 있어야 한다.
-- API secret은 backend 환경변수에서만 읽고 frontend·로그·fixture에 포함하지 않는다.
+- API secret은 batch 환경변수에서만 읽고 frontend·site data·로그·fixture·commit에 포함하지 않는다.
 - 초기 유료 API·hosting 결제는 하지 않는다.
-- 개발·검증은 Windows PowerShell에서 실행 가능해야 한다.
+- 로컬 개발·검증은 Windows PowerShell에서, 운영은 GitHub Actions(ubuntu-latest)에서 실행 가능해야 한다.
 
 ## Waves
 
 Wave 1: Task 1 — 저장 모델·공통 계약.
 Wave 2: Task 2, Task 3 — 공통 계약을 이용한 수집과 후보 분석을 각각 fixture로 개발.
-Wave 3: Task 4 — 수집·분석 결과를 API로 제공.
+Wave 3: Task 4 — 수집·분석 결과에 LLM 요약을 붙여 정적 JSON으로 export.
 Wave 4: Task 5, Task 6 — Task 5가 package·의존성·공통 API 타입을 먼저 준비한 뒤 Task 6을 시작한다. 이후 확정된 API와 graph JSON을 바탕으로 담당 화면 영역을 병렬 구현한다.
-Wave 5: Task 7 — 화면 통합·전향 평가·Windows 운영. 여기까지 1차 MVP.
+Wave 5: Task 7 — 화면 통합·전향 평가·GitHub Actions/Pages 운영. 여기까지 1차 MVP.
 Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장.
 
-같은 wave의 파일 소유권은 겹치지 않는다. 다만 Wave 4에는 Task 5→Task 6의 환경 준비 의존성이 있다. Task 5가 package·의존성·공통 API 타입 준비 완료를 알린 뒤 Task 6이 구현·검증을 시작하며, Task 6은 해당 공통 파일을 수정하지 않는다. Task 5는 graph 영역에 placeholder만 두고 Task 7에서 Task 6의 component를 연결한다. git 저장소가 없으므로 Task 1에서 로컬 git 초기화·기존 .gitignore 검토 후 시작하며 원격 생성·push는 포함하지 않는다.
+같은 wave의 파일 소유권은 겹치지 않는다. 다만 Wave 4에는 Task 5→Task 6의 환경 준비 의존성이 있다. Task 5가 package·의존성·공통 API 타입 준비 완료를 알린 뒤 Task 6이 구현·검증을 시작하며, Task 6은 해당 공통 파일을 수정하지 않는다. Task 5는 graph 영역에 placeholder만 두고 Task 7에서 Task 6의 component를 연결한다. 로컬 git 저장소(main)는 이미 있다. GitHub repo 생성·push는 Task 7에서 사용자 확인 후 수행한다.
 
 ## Review Focus
 
@@ -38,7 +42,8 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 2. 소스 장애·표본 부족 → 관심 하락/0으로 표시하지 않아야 한다(Task 3·5).
 3. 나중에 얻은 인용/분류 → 과거 예측에 섞이지 않아야 한다(Task 1·3).
 4. seed에 없는 새 약어와 동명이의어 → 새 후보를 찾되 자동 병합하지 않아야 한다(Task 3).
-5. zoom·레이어 변경과 시세 결측 → 선택·출처를 유지하고 잘못된 기술 edge를 만들지 않아야 한다(Task 6·8).
+5. Gemini 무료 한도 초과(429)·응답 실패 → 요약만 비고 batch·배포는 성공해야 하며, 같은 문서를 다시 요약하지 않아야 한다(Task 4).
+6. zoom·레이어 변경과 시세 결측 → 선택·출처를 유지하고 잘못된 기술 edge를 만들지 않아야 한다(Task 6·8).
 
 ## 공통 계약과 파일 구조
 
@@ -57,13 +62,13 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 
 동일한 계약을 frontend/src/api/types.ts 에 수동으로 반영하고, API fixture schema test로 차이를 감지한다.
 
-파일 구조는 backend/radar/{contracts,storage,collectors,analysis,api,cli}, frontend/src/{api,dashboard,detail,graph}, config, tests, scripts 로 구성한다. 각 Task의 Files에 담당 파일을 나열한다.
+파일 구조는 backend/radar/{contracts,storage,collectors,analysis,export,llm,cli}, frontend/src/{api,dashboard,detail,graph}, config, tests, scripts 로 구성한다. 각 Task의 Files에 담당 파일을 나열한다.
 
 ### Task 1: 시각·근거·리뷰 저장
 
 **Wave:** 1 · **Depends on:** none
 
-**Files:** Create `backend/pyproject.toml`, `backend/radar/__init__.py`, `backend/radar/contracts.py`, `backend/radar/storage.py`, `tests/test_storage.py`, `tests/fixtures/documents.json`, `config/topics.yml`, `config/sources.yml`, `.env.example`; Modify `.gitignore`.
+**Files:** Create `backend/pyproject.toml`, `backend/radar/__init__.py`, `backend/radar/contracts.py`, `backend/radar/storage.py`, `tests/test_storage.py`, `tests/fixtures/documents.json`, `config/topics.yml`, `config/sources.yml`, `config/llm.yml`, `.env.example`(`GEMINI_API_KEY=` 포함, 값 없음); Modify `.gitignore`.
 
 **Interfaces:** Produces `Repository(db_path: str)` with `upsert_document(doc: Document) -> None`, `list_documents(cutoff: datetime) -> list[Document]`, `save_observations(items: list[Observation]) -> None`, `save_run(run: SourceRun) -> None`, `save_review(review: Review) -> None`, `list_reviews() -> list[Review]`, `save_edges(edges: list[EvidenceEdge]) -> None`, `list_edges(cutoff: datetime) -> list[EvidenceEdge]`, `list_observations(cutoff: datetime) -> list[Observation]`, `list_runs() -> list[SourceRun]`.
 
@@ -102,18 +107,19 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 - [ ] `test_unmatched_baseline_has_no_invented_lead` 는 baseline에서 발견되지 않은 후보의 lead_days=null, additional_discovery=true인지 assert한다. precision@5·중복률·공통 후보의 lead 중앙값·검토 시간을 계산한다.
 - [ ] 모든 테스트의 PASS와 예측 확률이 출력되지 않는 것을 확인하고 commit한다.
 
-### Task 4: 근거를 추적할 수 있는 API
+### Task 4: LLM 요약과 정적 JSON export
 
 **Wave:** 3 · **Depends on:** 2, 3
 
-**Files:** Create `backend/radar/api/{__init__,app,queries}.py`, `tests/test_api.py`, `tests/fixtures/api/{dashboard,topic,graph}.json`.
+**Files:** Create `backend/radar/llm.py`, `backend/radar/export.py`, `tests/test_llm.py`, `tests/test_export.py`, `tests/fixtures/site-data/{dashboard,graph}.json`, `tests/fixtures/site-data/topics/sample.json`.
 
-**Interfaces:** Consumes Repository·collect·compute_trends·discover. Produces `GET /api/dashboard -> DashboardPayload`, `GET /api/topics/{id} -> TopicDetail`, `GET /api/graph?as_of=... -> GraphPayload`, `POST /api/reviews(Review) -> Review`, `POST /api/candidates/link` body `{url: str}` → `{status: proposed, url: str}`.
+**Interfaces:** Consumes Repository·collect·compute_trends·discover. Produces `summarize(candidate: Candidate, documents: list[Document], client: LLMClient | None) -> CandidateSummary | None` (CandidateSummary: why_new, difference, limitations, model, generated_at, source_document_ids), `export_site(repo: Repository, out_dir: str, as_of: datetime) -> None` → `out_dir/dashboard.json`(DashboardPayload), `out_dir/topics/{entity_id}.json`(TopicDetail), `out_dir/graph.json`(GraphPayload). Candidate·TopicDetail에 `summary: CandidateSummary | null` 필드를 추가한다(contracts.py 수정은 이 Task가 담당).
 
-- [ ] `test_dashboard_evidence_and_stale_source` 는 후보에서 evidence_ids의 문헌을 추적할 수 있고 failed source에 마지막 성공 시각이 남는지 assert한다. `test_review_persists` 와 `test_graph_relation_provenance` 를 작성한다.
-- [ ] `python -m pytest tests/test_api.py -q` 로 미구현으로 인한 실패를 확인한다.
-- [ ] local-only API를 구현한다. 수동 URL 추가는 후보 등록까지만 수행하고 server에서 임의 URL을 fetch하지 않는다. unknown ID는 404, 빈 그래프는 200과 빈 배열을 반환한다. 시작 시 거래 인증이나 외부 쓰기를 실행하지 않는다.
-- [ ] API schema와 fixture를 저장하고 PASS를 확인한 뒤 commit한다.
+- [ ] `test_llm_disabled_returns_none` 는 `GEMINI_API_KEY` 미설정 시 None, `test_llm_429_does_not_fail_run` 은 fake client가 429를 던져도 None과 경고만 남는지, `test_summary_cached_by_document_set` 은 같은 candidate·문서 집합이면 두 번째 호출에서 client가 호출되지 않는지, `test_summary_only_cites_given_documents` 는 source_document_ids가 입력 문서의 부분집합인지 assert한다.
+- [ ] `test_export_evidence_and_stale_source` 는 후보 evidence_ids의 문헌이 topic JSON에 있고 failed source의 마지막 성공 시각이 dashboard에 남는지, `test_export_contains_no_secret` 은 export 결과 전체에 env 값 문자열이 없는지, `test_empty_graph_is_valid` 는 빈 nodes/edges 배열이 출력되는지 assert한다.
+- [ ] `python -m pytest tests/test_llm.py tests/test_export.py -q` 로 실패를 확인한다.
+- [ ] Gemini 호출은 실행당 상한(`config/llm.yml`의 `max_calls_per_run`, 기본 30)과 요청 간 간격을 두고, 입력은 제목·abstract·URL만 보낸다. 요약은 SQLite에 캐시하고 model·generated_at을 보존해 화면에 "LLM 생성, 원문 확인 필요"를 표시할 수 있게 한다.
+- [ ] PASS를 확인하고 commit한다.
 
 ### Task 5: 요약 A와 상세 B
 
@@ -121,12 +127,12 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 
 **Files:** Create `frontend/package.json`, `frontend/index.html`, `frontend/vite.config.ts`, `frontend/tsconfig.json`, `frontend/src/{main,App}.tsx`, `frontend/src/styles.css`, `frontend/src/api/{types,client}.ts`, `frontend/src/dashboard/Dashboard.tsx`, `frontend/src/detail/TopicDetail.tsx`, `frontend/src/dashboard/Dashboard.test.tsx`, `frontend/src/detail/TopicDetail.test.tsx`. lockfile은 이 Task에서만 담당한다.
 
-**Interfaces:** Consumes API contracts. Produces `App`, graph 탭 placeholder, `TopicDetail({id: string})`.
+**Interfaces:** Consumes Task 4의 site data JSON 계약. `client.ts`는 `import.meta.env.BASE_URL + "data/..."`를 fetch한다. 리뷰·관심은 localStorage key `yuykim-trend-radar:reviews`, `yuykim-trend-radar:watchlist`에 저장하고 JSON export 버튼을 제공한다. Produces `App`, graph 탭 placeholder, `TopicDetail({id: string})`.
 
 - [ ] `shows_missing_and_low_support` 는 missing을 0%로 표시하지 않는지, `opens_topic_evidence` 는 카드 선택→문헌 링크→기준 시각을 확인한다. `labels_preprint_and_unverified_summary` 는 동료심사와 본문 확인 상태의 혼동을 방지한다.
 - [ ] `npm --prefix frontend test -- --run` 으로 미구현으로 인한 실패를 확인한다.
-- [ ] 4개 영역의 요약·상세·리뷰 입력을 구현한다. source 장애, 초기 데이터 부족, 빈 상태를 표시한다. 미래 성공률 수치 대신 성장 후보의 feature와 불확실성을 나열한다. LLM이 설정되지 않아도 원문과 규칙 설명이 표시되어야 한다.
-- [ ] 같은 테스트와 `npm --prefix frontend run build` 의 PASS를 확인하고 package/lock을 포함해 commit한다.
+- [ ] prototype/의 시각 디자인을 옮겨 4개 영역의 요약·상세·리뷰 입력을 구현한다. LLM 요약은 출처 문서 링크와 "LLM 생성" 표시를 함께 보여준다. source 장애, 초기 데이터 부족, 빈 상태를 표시한다. 미래 성공률 수치 대신 성장 후보의 feature와 불확실성을 나열한다. LLM이 설정되지 않아도 원문과 규칙 설명이 표시되어야 한다.
+- [ ] 같은 테스트와 `npm --prefix frontend run build`(Vite `base: '/yuykim-trend-radar/'`) 의 PASS를 확인하고 package/lock을 포함해 commit한다.
 
 ### Task 6: 기술·기업 graph
 
@@ -145,28 +151,28 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 
 **Wave:** 5 · **Depends on:** 5, 6
 
-**Files:** Create `backend/radar/cli.py`, `scripts/register-daily-task.ps1`, `tests/test_daily_run.py`, `tests/e2e/radar.spec.ts`, `config/evaluation.yml`, `README.md`; Modify `frontend/src/App.tsx`, `frontend/package.json`.
+**Files:** Create `backend/radar/cli.py`, `.github/workflows/daily.yml`, `tests/test_daily_run.py`, `tests/e2e/radar.spec.ts`, `config/evaluation.yml`, `README.md`; Modify `frontend/src/App.tsx`, `frontend/package.json`.
 
-**Interfaces:** Consumes 모든 선행 계약. Produces `python -m radar.cli collect --as-of ISO8601`, `python -m radar.cli evaluate --protocol config/evaluation.yml`.
+**Interfaces:** Consumes 모든 선행 계약. Produces `python -m radar.cli run --as-of ISO8601 --out frontend/public/data`(collect→analyze→summarize→export), `python -m radar.cli evaluate --protocol config/evaluation.yml`.
 
-- [ ] `test_duplicate_run_locked`, `test_resume_partial_run`, `test_timezone_0700_seoul` 을 작성한다. E2E는 요약→상세→graph→근거→리뷰→새로고침 후 저장 유지 여부를 확인한다.
-- [ ] `python -m pytest tests/test_daily_run.py -q` 와 E2E 명령으로 미구현으로 인한 실패를 확인한다.
-- [ ] graph 통합과 CLI, 07:00 KST Task Scheduler 등록 script를 구현한다. script는 생성만 하고 사용자가 터미널에서 명시적으로 실행하도록 절차를 작성한다. 중복 실행 lock·실패 log·수동 재실행을 제공한다.
-- [ ] config/evaluation.yml에 4주, 후보 하루 최대 5건, baseline, spec의 Go 기준 5개 항목을 고정한다. 전향 평가 시작일, score를 가린 리뷰, sample 부족 시 inconclusive를 기록한다. 데이터 누락 시 비교 대상 날짜 제외를 명시한다.
-- [ ] 전체 backend pytest, frontend unit, build, Playwright E2E를 실행한다. 실제 key가 설정되지 않은 source와 향후 90일 평가 미완료를 README에 명시한다. 구현 완료와 유용성 입증을 각각 보고하고 commit한다.
+- [ ] `test_resume_partial_run`, `test_as_of_is_0700_seoul`(22:00 UTC 실행이 다음날 07:00 KST as_of를 갖는지), `test_run_succeeds_without_llm` 을 작성한다. E2E는 요약→상세→graph→근거→리뷰→새로고침 후 localStorage 유지를 확인한다.
+- [ ] `python -m pytest tests/test_daily_run.py -q` 와 E2E 명령으로 실패를 확인한다.
+- [ ] graph 통합과 CLI를 구현한다. `daily.yml`은 `schedule: cron '0 22 * * *'`, `workflow_dispatch`, `concurrency`(중복 실행 방지)를 갖고 test → `radar.cli run` → `data/radar.db` commit(bot) → frontend build → `actions/deploy-pages` 순으로 수행한다. secret은 `secrets.GEMINI_API_KEY`로만 주입하고 로그에 출력하지 않는다.
+- [ ] config/evaluation.yml에 4주, 후보 하루 최대 5건, baseline, spec의 Go 기준 5개 항목을 고정한다. 전향 평가 시작일, score를 가린 리뷰, sample 부족 시 inconclusive를 기록한다.
+- [ ] 전체 pytest, frontend unit, build, Playwright E2E를 로컬에서 실행한다. 사용자 확인 후 `gh repo create yuykim-trend-radar --public`, push, Pages(source: GitHub Actions) 활성화, `GEMINI_API_KEY` secret 등록을 수행하고 README에 절차를 적는다. push 전 `.env`가 tracked되지 않았는지 확인하고, `workflow_dispatch` 1회 실행으로 배포 URL을 확인한다.
 
 ### Task 8: 평가 후 선택적 확장
 
 **Wave:** 6 · **Depends on:** 7 및 1차 평가 판단
 
-**Files:** Create `backend/radar/collectors/{hn,bluesky,toss}.py`, `backend/radar/analysis/{community,companies,correlation}.py`, `tests/test_enrichment.py`, `config/company-seeds.yml`; Modify `backend/radar/api/queries.py`, `frontend/src/detail/TopicDetail.tsx`.
+**Files:** Create `backend/radar/collectors/{hn,bluesky,toss}.py`, `backend/radar/analysis/{community,companies,correlation}.py`, `tests/test_enrichment.py`, `config/company-seeds.yml`; Modify `backend/radar/export.py`, `frontend/src/detail/TopicDetail.tsx`.
 
 **Interfaces:** Produces `community_candidates(documents: list[Document]) -> list[Candidate]`, `company_edges(documents: list[Document]) -> list[EvidenceEdge]`, `correlate(returns_by_security: dict[str,list[Observation]], window: int=120, min_overlap: int=60) -> list[EvidenceEdge]`.
 
 - [ ] API 권한·비용·데이터 저장 조건을 소량 read-only 연결로 확인한다. 미확인 connector는 disabled로 둔다. HN/Bluesky는 관련 비율과 추가 후보 수, Reddit/Threads는 자격·권한을 먼저 확인한다.
 - [ ] `test_reposts_do_not_count_as_independent`, `test_affiliation_not_adoption`, `test_correlation_requires_60_aligned_returns` 를 작성한다. 조정 방식이 unknown이거나 서로 다른 통화·시장을 정렬하지 않고 비교한 경우 edge가 생성되지 않는지 assert한다.
 - [ ] `python -m pytest tests/test_enrichment.py -q` 로 미구현으로 인한 실패를 확인한다.
-- [ ] 원본 게시물·자동 배포·독립적인 논의를 구분하고 기업 관계는 수동 확인한 seed에서 확장한다. 토스의 sector/candle 조회만 구현하고, 120거래일/최소 60일·수정종가의 일간 수익률로 계산한다. 기업 ID와 증권 ID의 혼동을 방지한다.
+- [ ] 원본 게시물·자동 배포·독립적인 논의를 구분하고 기업 관계는 수동 확인한 seed에서 확장한다. 토스의 sector/candle 조회만 구현한다. 토스 API는 허용 IP 등록이 필요해 GitHub Actions의 유동 IP에서는 동작하지 않으므로 로컬 수동 실행 전용으로 두고 결과만 commit한다. 계산은 120거래일/최소 60일·수정종가의 일간 수익률로 계산한다. 기업 ID와 증권 ID의 혼동을 방지한다.
 - [ ] 테스트·관련 frontend 테스트·build를 실행한다. 추가 가치가 없는 source를 제외하는 판단도 기록하고 commit한다. 주문 기능은 추가하지 않는다.
 
 ## 계획 자기점검
@@ -175,4 +181,4 @@ Wave 6: Task 8 — 1차 평가 후 선택적 커뮤니티·기업·주가 확장
 - 현재 관심도·신규 후보·미래 성장 target을 구분하고 미래 예측 성능은 구현 완료 조건에 포함하지 않았다.
 - 같은 wave의 담당 파일은 겹치지 않는다. 다만 Wave 4의 Task 6은 실행 환경 준비를 위해 Task 5의 package 생성을 기다려야 하므로 완전히 독립적이지 않다. graph 계약은 Task 4에서 고정된다.
 - Go 기준은 사용자 가치를 위한 제안 임계값이며 논문에서 얻은 실증값이 아니다. 4주가 끝나기 전에 성공을 선언하지 않는다.
-- 이번 요청의 작업 범위는 조사·계획 작성까지다. 앱 구현·스케줄 등록·유료 계약은 수행하지 않았다.
+- 서버·Windows Task Scheduler를 제거하고 GitHub Actions/Pages로 대체했다. LLM 실패는 batch 실패로 이어지지 않는다(Task 4·7).

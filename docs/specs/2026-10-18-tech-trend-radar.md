@@ -67,6 +67,21 @@ Python + FastAPI + SQLite backend, React + TypeScript + Vite + Cytoscape.js fron
 
 API·hosting 유료 결제는 초기 설계에 포함하지 않는다. OpenAlex는 무료 예산을 넘기기 전에 중단하고, 선택 LLM 요약은 호출을 끄더라도 원문 기반 화면이 동작하게 한다. Windows Task Scheduler는 중복 실행 lock·누락 작업 복구·로그를 포함한 명시적 설치 절차를 제공한다.
 
+## 구현 전 결정 사항 (2026-10-18)
+
+사용자 결정:
+- LLM 요약은 무료 API를 쓴다. 1순위 Google Gemini API Flash 계열 무료 tier, 예비 Groq/OpenRouter 무료 모델. 공개 논문 메타데이터·abstract만 전송한다. 무료 한도는 구현 시 공식 문서로 재확인한다.
+- 실행은 무료 클라우드다. GitHub Actions가 매일 07:00 Asia/Seoul(22:00 UTC) 자동 갱신하고 workflow_dispatch로 수동 갱신을 지원한다. 결과는 GitHub Pages 정적 사이트로 배포한다. repo는 public이다.
+- 알림은 이번 범위에서 제외한다.
+- seed는 OpenAlex Topics, arXiv cs.RO·학회 세션/workshop 제목, GitHub awesome 목록·survey 논문에서 초안을 만들고 사용자가 확인한다. X·Threads는 seed 출처로 쓰지 않는다.
+
+내 판단(builder call):
+- FastAPI 서버 대신 Python batch가 정적 JSON(dashboard/topic/graph)을 생성하고, frontend가 이를 읽는다. SQLite는 Actions 실행 간 repo에 commit하거나 artifact로 보존한다.
+- 화면 디자인과 흐름은 prototype/을 따른다.
+- 사용자 리뷰(Review)는 정적 사이트라 서버에 쓸 수 없으므로 브라우저 localStorage에 저장하고 JSON export를 제공한다.
+- Windows Task Scheduler 운영 절차는 제거한다. 로컬 실행은 개발·검증용 CLI로만 남긴다.
+- Gemini key는 GitHub Actions secret으로만 주입한다. public repo이므로 .env·secret은 절대 commit하지 않는다.
+
 ## 보조 금융 기능
 
 기업과 증권 식별·기술 근거가 검토된 이후 토스의 조회 기능만 연결한다. 시세 기준 시각·통화·거래소·지연 상태를 표시한다. 수익률 상관은 같은 시장/통화 기준의 수정 종가가 확보된 경우 우선 최근 120거래일, 공통 관측일 최소 60일로 계산한다. 가격 수준 상관은 사용하지 않는다. 결측일 forward fill·해외/국내 비동기 종가의 단순 혼합을 피하고 비교 불가 사유를 표시한다. 조정 방식 불명확 시 상관 레이어를 비활성화한다. 기업 연결·주가 상관은 미래 수익률의 증거가 아니다(B12–B15).
@@ -75,9 +90,9 @@ API·hosting 유료 결제는 초기 설계에 포함하지 않는다. OpenAlex�
 
 - 초기 도메인은 Physical AI, 사용자는 개인 1명이다.
 - 주가 예측·자동매매·주문 API는 구현 범위 밖이다.
-- 갱신 기준은 매일 07:00 Asia/Seoul이다.
+- 갱신 기준은 매일 07:00 Asia/Seoul이며 수동 갱신을 지원한다.
 - 미확인 값은 null/unknown, 수집 누락은 missing으로 보존한다.
 - 모든 후보와 관계는 source URL·기준 시점·검토 상태로 추적할 수 있어야 한다.
 - API secret은 backend 환경변수에서만 읽고 frontend·로그·fixture에 포함하지 않는다.
-- 초기 유료 API·hosting 결제는 하지 않는다.
+- 초기 유료 API·hosting 결제는 하지 않는다(GitHub Actions·Pages, 무료 LLM tier).
 - 개발·검증은 Windows PowerShell에서 실행 가능해야 한다.

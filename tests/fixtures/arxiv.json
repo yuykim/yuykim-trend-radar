@@ -1,0 +1,4 @@
+{
+  "synthetic": true,
+  "body": "<feed xmlns=\"http://www.w3.org/2005/Atom\" xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\"><opensearch:totalResults>3</opensearch:totalResults>\n<entry><id>http://arxiv.org/abs/2610.00001v1</id><title>Synthetic Robot Policy</title><summary>Synthetic test metadata, not a real research claim.</summary><published>2026-10-01T00:00:00Z</published><updated>2026-10-01T00:00:00Z</updated><arxiv:doi>10.1234/synthetic-policy</arxiv:doi></entry>\n<entry><id>http://arxiv.org/abs/2610.00001v2</id><title>Synthetic Robot Policy</title><summary>Synthetic revised metadata.</summary><published>2026-10-01T00:00:00Z</published><updated>2026-10-05T00:00:00Z</updated><arxiv:doi>10.1234/synthetic-policy</arxiv:doi></entry></feed>"
+}

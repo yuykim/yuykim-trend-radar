@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "count": 1,
+  "notes": [
+    {
+      "id": "synthetic-note",
+      "forum": "synthetic-note",
+      "pdate": 1791590400000,
+      "mdate": 1791590400000,
+      "content": {
+        "title": {
+          "value": "Synthetic Robot Policy"
+        },
+        "abstract": {
+          "value": "Synthetic public submission; acceptance unknown."
+        },
+        "arxiv_id": {
+          "value": "2610.00001"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+version: 1
+# sources.yml remains the authoritative enable switch. This manifest defines
+# query coverage; changing it changes coverage_id and invalidates checkpoints.
+arxiv:
+  api_version: atom-1.0
+  endpoint: https://export.arxiv.org/api/query
+  broad_scope: categories_from_sources_yml
+  seed_scope: full_names_from_topics_yml
+  page_size: 100
+  max_pages: 100
+  limitation: Latest returned version only; Atom does not enumerate all earlier versions.
+openreview:
+  # No unverified venue IDs are invented. To enable: verify a public submission
+  # invitation and reuse permission, then add venue_id, invitation, api_version
+  # (1 or 2), verification: verified, evidence_url, verified_at; finally set
+  # sources.yml openreview.enabled=true. APIs: api.openreview.net (1),
+  # api2.openreview.net (2). Public submissions do not imply acceptance.
+  venues: []
+  page_size: 100
+  max_pages: 100
+  limitation: No venue verified; public note availability and reuse remain unverified.
+openalex:
+  api_version: works-rest
+  endpoint: https://api.openalex.org/works
+  search: robot learning
+  page_size: 100
+  max_pages: 100
+  daily_budget_milliusd: 950
+  limitation: Shared local daily budget; other clients using the same account are outside this ledger.

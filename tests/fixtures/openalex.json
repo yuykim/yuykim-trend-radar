@@ -1,0 +1,35 @@
+{
+  "synthetic": true,
+  "meta": {
+    "count": 1,
+    "next_cursor": null
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W000000001",
+      "doi": "https://doi.org/10.1234/synthetic-policy",
+      "ids": {
+        "doi": "https://doi.org/10.1234/synthetic-policy"
+      },
+      "title": "Synthetic Robot Policy",
+      "publication_date": "2026-10-10",
+      "is_retracted": false,
+      "abstract_inverted_index": {
+        "Synthetic": [
+          0
+        ],
+        "robot": [
+          1
+        ],
+        "policy": [
+          2
+        ]
+      },
+      "primary_location": {
+        "landing_page_url": "https://arxiv.org/abs/2610.00001",
+        "pdf_url": null
+      },
+      "locations": []
+    }
+  ]
+}

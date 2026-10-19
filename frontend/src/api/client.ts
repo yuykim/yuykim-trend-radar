@@ -28,7 +28,9 @@ export function useTopic(id: string) {
 export function formatTime(value: string | null): string {
   if (value === null) return '미확인';
   const date = new Date(value);
-  return Number.isNaN(date.getTime()) ? '미확인' : date.toISOString().replace('T', ' ').replace('.000Z', ' UTC');
+  if (Number.isNaN(date.getTime())) return '미확인';
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(date).map(p => [p.type, p.value]));
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute} KST`;
 }
 
 export function safeUrl(value: string): string | undefined {

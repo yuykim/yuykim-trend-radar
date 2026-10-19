@@ -77,7 +77,7 @@ export function GraphView({ data, onSelect }: GraphViewProps) {
           // Allocate unused slots so revealing companies cannot overlap existing technology nodes.
           const index = positions.current.size;
           const columns = 3;
-          positions.current.set(node.id, { x: 95 + (index % columns) * 170, y: 75 + Math.floor(index / columns) * 120 });
+          positions.current.set(node.id, { x: 150 + (index % columns) * 260, y: 75 + Math.floor(index / columns) * 120 });
         }
         return { data: { id: nodeIds.get(node.id), entityId: node.id, label: node.label },
           classes: node.type === 'company' ? 'company' : '', position: positions.current.get(node.id) };

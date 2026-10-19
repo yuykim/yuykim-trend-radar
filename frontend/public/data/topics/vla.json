@@ -1,40 +1,28 @@
 {
   "entity_id": "vla",
-  "label": "VLA",
-  "aliases": [],
-  "documents": [
-    {
-      "id": "doc-vla",
-      "source": "demo",
-      "source_id": "demo-vla",
-      "canonical_id": "demo-vla",
-      "title": "VLA 데모 문헌",
-      "abstract": "합성 데모 초록입니다. 실제 논문이나 검증된 실험 결과가 아닙니다.",
-      "url": "https://example.org/radar/vla",
-      "version": "v1",
-      "published_at": "2026-10-09T00:00:00Z",
-      "first_public_at": "2026-10-09T00:00:00Z",
-      "observed_at": "2026-10-12T01:00:00Z",
-      "available_at": "2026-10-12T01:00:00Z",
-      "status": "preprint"
-    }
+  "label": "Vision-Language-Action",
+  "aliases": [
+    "vision-language-action",
+    "vision language action",
+    "VLA"
   ],
+  "documents": [],
   "observations": [
     {
       "entity_id": "vla",
-      "metric": "research_share_28d",
-      "value": 0.06,
-      "available_at": "2026-10-17T22:00:00Z",
-      "observed_at": "2026-10-17T22:00:00Z",
-      "source": "demo",
-      "coverage_id": "demo-physical-ai-v1",
-      "state": "ok"
+      "metric": "count_28d",
+      "value": null,
+      "available_at": "2026-10-18T13:34:57.532378Z",
+      "observed_at": "2026-10-18T13:34:57.532378Z",
+      "source": "arxiv",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "state": "missing"
     }
   ],
   "evidence_edges": [],
   "limitations": [
-    "DEMO · 합성 데이터. 실제 연구 평가에 사용할 수 없습니다.",
-    "초록만 확인하는 예시이며 본문·코드·모델·재현성은 미확인입니다."
+    "원문·코드·재현성 검증 상태는 별도로 확인해야 합니다.",
+    "수집 coverage 미확인: missing은 관심도 하락이나 0을 의미하지 않습니다."
   ],
   "summary": null
 }

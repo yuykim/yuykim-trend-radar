@@ -2,11 +2,11 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { TopicDetail } from './TopicDetail';
 import App from '../App';
-import data from '../../public/data/dashboard.json';
-import tactile from '../../public/data/topics/tactile.json';
-import world from '../../public/data/topics/world.json';
-import jepa from '../../public/data/topics/jepa.json';
-import vla from '../../public/data/topics/vla.json';
+import data from '../../../tests/e2e/data/dashboard.json';
+import tactile from '../../../tests/e2e/data/topics/tactile.json';
+import world from '../../../tests/e2e/data/topics/world.json';
+import jepa from '../../../tests/e2e/data/topics/jepa.json';
+import vla from '../../../tests/e2e/data/topics/vla.json';
 
 function mockData(topic: unknown = tactile) {
   vi.stubGlobal('fetch', vi.fn(async (url: string) => ({ ok: true, json: async () => url.endsWith('dashboard.json') ? data : url.includes('tactile') ? topic : url.includes('jepa') ? jepa : url.includes('vla') ? vla : world })));

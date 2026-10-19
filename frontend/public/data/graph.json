@@ -1,26 +1,26 @@
 {
   "nodes": [
     {
-      "id": "world",
-      "label": "World Models",
-      "type": "technology"
-    },
-    {
       "id": "jepa",
-      "label": "JEPA",
-      "type": "technology"
+      "label": "Joint Embedding Predictive Architecture",
+      "type": "topic"
     },
     {
-      "id": "tactile",
-      "label": "Tactile Learning",
-      "type": "technology"
+      "id": "robot-learning",
+      "label": "Robot Learning",
+      "type": "topic"
     },
     {
       "id": "vla",
-      "label": "VLA",
-      "type": "technology"
+      "label": "Vision-Language-Action",
+      "type": "topic"
+    },
+    {
+      "id": "world-model",
+      "label": "World Model",
+      "type": "topic"
     }
   ],
   "edges": [],
-  "generated_at": "2026-10-17T22:00:00Z"
+  "generated_at": "2026-10-18T13:34:57.532378Z"
 }

@@ -17,8 +17,10 @@ const groups = [
 ];
 const candidateKinds = { new_term: '신규 용어', new_cluster: '신규 군집', new_combination: '새 조합', rename_or_alias: '이름 변경·동의어 검토' };
 
+const errorLabels: Record<string, string> = { http_429: '요청 한도 초과 · http_429', config_disabled: '설정에서 비활성 · config_disabled', network: '네트워크 오류 · network' };
+const errorLabel = (code: string) => errorLabels[code] ?? code;
 function TrendMetric({ trend }: { trend: Trend }) {
-  if (trend.support === 'missing') return <div className="metric uncertainty">수집 누락 (missing) · 관심 하락으로 해석할 수 없음</div>;
+  if (trend.support === 'missing') return <div className="metric uncertainty">수집 누락 (missing) · 관심 하락 아님</div>;
   return <div className="metric"><strong>{trend.count_28d}건</strong> 논문 / 28일
     <br />연구 비중 {trend.share_28d === null ? '미확인' : `${(trend.share_28d * 100).toFixed(1)}%`}
     <br />직전 28일 대비 {trend.share_change === null ? '비교 불가' : `${trend.share_change > 0 ? '+' : ''}${(trend.share_change * 100).toFixed(1)} percentage points`}
@@ -50,11 +52,14 @@ export function Dashboard({ data, saved, onSave, onSelect, savedOnly = false }: 
   const [filter, setFilter] = useState('all');
   const candidates = [data.candidates, data.growth_watchlist, data.community_candidates];
   const sources = [...new Set(data.source_runs.map(run => run.source))];
+  const allMissing = data.trends.length > 0 && data.trends.every(t => t.support === 'missing');
+  const degraded = data.source_runs.filter(run => run.status === 'partial' || run.status === 'failed');
   return <>
     <section className="toolbar" aria-label="기술 탐색">
       <label className="search"><span aria-hidden="true">⌕</span><input type="search" aria-label="기술 이름 또는 키워드 검색" placeholder="기술 이름 또는 키워드 검색" value={query} onChange={e => setQuery(e.target.value)} /></label>
       <div className="filters" aria-label="분류 필터">{[{ id: 'all', title: '전체' }, ...groups].map(g => <button key={g.id} className={filter === g.id ? 'active' : ''} aria-pressed={filter === g.id} onClick={() => setFilter(g.id)}>{g.title}</button>)}</div>
     </section>
+    {allMissing && !savedOnly && <p className="uncertainty" role="note">이번 기준 시각에는 논문 수를 표시하지 않습니다. {degraded.length ? `${degraded.map(r => `${r.source} ${r.status === 'partial' ? '일부 수집' : '수집 실패'}${r.error_code ? ` (${errorLabel(r.error_code)})` : ''}`).join(', ')} 때문에 coverage가 완전하지 않습니다.` : '같은 coverage의 분모를 확보하지 못했습니다.'} 다음 실행에서 이어서 수집합니다.</p>}
     {savedOnly && <p className="saved-intro">관심 기술 {saved.length}개 · 이 브라우저에 저장됩니다.</p>}
     <div className="results">
       {groups.map((group, groupIndex) => {
@@ -76,7 +81,7 @@ export function Dashboard({ data, saved, onSave, onSelect, savedOnly = false }: 
         const latest = runs[0];
         const success = runs.find(run => run.status === 'ok');
         const status = { ok: '정상', partial: '일부 수집 · 누락 있음', failed: '수집 실패', disabled: '비활성 · 미수집' }[latest.status];
-        return <div className="source-row" key={source}><strong>{source}: {status}</strong><span>최근 시도 {formatTime(latest.started_at)}</span><span>마지막 정상 결과: {success ? formatTime(success.finished_at) : '확인 불가'}</span><small>coverage: {latest.coverage_id ?? '미확인'}{latest.error_code ? ` · ${latest.error_code}` : ''}</small></div>;
+        return <div className="source-row" key={source}><strong>{source}: {status}</strong><span>최근 시도 {formatTime(latest.started_at)}</span><span>마지막 정상 결과: {success ? formatTime(success.finished_at) : '확인 불가'}</span><small>coverage: {latest.coverage_id ?? '미확인'}{latest.error_code ? ` · ${errorLabel(latest.error_code)}` : ''}</small></div>;
       })}
     </section>
   </>;

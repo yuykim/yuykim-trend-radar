@@ -1,0 +1,27 @@
+{
+  "entity_id": "robot-learning",
+  "label": "Robot Learning",
+  "aliases": [
+    "robot learning",
+    "robot-learning"
+  ],
+  "documents": [],
+  "observations": [
+    {
+      "entity_id": "robot-learning",
+      "metric": "count_28d",
+      "value": null,
+      "available_at": "2026-10-18T13:34:57.532378Z",
+      "observed_at": "2026-10-18T13:34:57.532378Z",
+      "source": "arxiv",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "state": "missing"
+    }
+  ],
+  "evidence_edges": [],
+  "limitations": [
+    "원문·코드·재현성 검증 상태는 별도로 확인해야 합니다.",
+    "수집 coverage 미확인: missing은 관심도 하락이나 0을 의미하지 않습니다."
+  ],
+  "summary": null
+}

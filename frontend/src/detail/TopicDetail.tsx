@@ -45,7 +45,7 @@ function Summary({ summary, documents }: { summary: CandidateSummary | null; doc
 const documentStatus = { preprint: 'preprint · 동료심사 전', accepted: 'accepted · 게재 승인', retracted: 'retracted · 철회됨', unknown: 'unknown · 동료심사 상태 미확인' };
 function Content({ data, ...props }: Props & { data: TopicData }) {
   return <>
-    <p className="tag">TECHNOLOGY BRIEF</p><h2 id="detail-title">{data.label}</h2>
+    <h2 id="detail-title">{data.label}</h2>
     <p className="detail-lead">{data.aliases.length ? `다른 이름: ${data.aliases.join(', ')}` : '확인된 다른 이름 없음'}</p>
     <p>기준 시각: {props.asOf ? formatTime(props.asOf) : 'dashboard 기준 시각 미제공'}</p>
     {props.onSave && <button className="detail-save" aria-pressed={props.saved ?? false} onClick={() => props.onSave!(props.id)}>{props.saved ? '★ 관심 저장됨' : '☆ 관심 저장'}</button>}

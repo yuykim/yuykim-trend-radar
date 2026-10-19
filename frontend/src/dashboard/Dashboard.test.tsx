@@ -2,11 +2,11 @@ import { fireEvent, render, screen, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import App from '../App';
 import { Dashboard } from './Dashboard';
-import data from '../../public/data/dashboard.json';
-import world from '../../public/data/topics/world.json';
-import tactile from '../../public/data/topics/tactile.json';
-import jepa from '../../public/data/topics/jepa.json';
-import vla from '../../public/data/topics/vla.json';
+import data from '../../../tests/e2e/data/dashboard.json';
+import world from '../../../tests/e2e/data/topics/world.json';
+import tactile from '../../../tests/e2e/data/topics/tactile.json';
+import jepa from '../../../tests/e2e/data/topics/jepa.json';
+import vla from '../../../tests/e2e/data/topics/vla.json';
 import type { DashboardPayload } from '../api/types';
 
 export function mockData() {
@@ -28,7 +28,7 @@ describe('dashboard', () => {
     render(<App />);
     fireEvent.click(await screen.findByRole('button', { name: 'World Models 상세 보기' }));
     expect(await screen.findByRole('link', { name: 'World Model 데모 문헌' })).toHaveAttribute('href', 'https://example.org/radar/world');
-    expect(screen.getAllByText(/2026-10-17 22:00:00 UTC/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/2026-10-18 07:00 KST/).length).toBeGreaterThan(0);
     expect(screen.getByText(/최초 공개/)).toBeInTheDocument();
   });
   it('keeps watchlist after remount and filters cards', async () => {

@@ -1,23 +1,23 @@
 {
-  "as_of": "2026-10-20T00:55:17.142366+00:00",
+  "as_of": "2026-10-21T00:23:26.589332+00:00",
   "collection_cutoff": "2026-10-18T22:00:00+00:00",
-  "collected": 4800,
-  "visible_documents": 4800,
+  "collected": 7000,
+  "visible_documents": 7000,
   "demo": false,
   "source_runs": [
     {
       "source": "arxiv",
-      "started_at": "2026-10-20T00:53:48.736864Z",
-      "finished_at": "2026-10-20T00:55:15.828276Z",
+      "started_at": "2026-10-21T00:21:47.412535Z",
+      "finished_at": "2026-10-21T00:23:24.816173Z",
       "status": "partial",
       "coverage_id": "arxiv:ac49e33873bea0504639",
-      "item_count": 4800,
+      "item_count": 7000,
       "error_code": "http_429"
     },
     {
       "source": "openreview",
-      "started_at": "2026-10-20T00:55:15.831594Z",
-      "finished_at": "2026-10-20T00:55:15.831595Z",
+      "started_at": "2026-10-21T00:23:24.821328Z",
+      "finished_at": "2026-10-21T00:23:24.821331Z",
       "status": "disabled",
       "coverage_id": null,
       "item_count": 0,
@@ -25,8 +25,8 @@
     },
     {
       "source": "openalex",
-      "started_at": "2026-10-20T00:55:15.833772Z",
-      "finished_at": "2026-10-20T00:55:15.833773Z",
+      "started_at": "2026-10-21T00:23:24.825290Z",
+      "finished_at": "2026-10-21T00:23:24.825292Z",
       "status": "disabled",
       "coverage_id": null,
       "item_count": 0,

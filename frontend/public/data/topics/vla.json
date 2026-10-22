@@ -37,6 +37,16 @@
       "source": "arxiv",
       "coverage_id": "arxiv:ac49e33873bea0504639",
       "state": "missing"
+    },
+    {
+      "entity_id": "vla",
+      "metric": "count_28d",
+      "value": null,
+      "available_at": "2026-10-22T00:26:15.477803Z",
+      "observed_at": "2026-10-22T00:26:15.477803Z",
+      "source": "arxiv",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "state": "missing"
     }
   ],
   "evidence_edges": [],

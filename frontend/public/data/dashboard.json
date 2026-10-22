@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-21T00:23:26.589332Z",
+  "as_of": "2026-10-22T00:26:15.477803Z",
   "trends": [
     {
       "entity_id": "jepa",
@@ -42,6 +42,33 @@
   "community_candidates": [],
   "growth_watchlist": [],
   "source_runs": [
+    {
+      "source": "openalex",
+      "started_at": "2026-10-22T00:26:13.883286Z",
+      "finished_at": "2026-10-22T00:26:13.883288Z",
+      "status": "disabled",
+      "coverage_id": null,
+      "item_count": 0,
+      "error_code": "config_disabled"
+    },
+    {
+      "source": "openreview",
+      "started_at": "2026-10-22T00:26:13.880370Z",
+      "finished_at": "2026-10-22T00:26:13.880372Z",
+      "status": "disabled",
+      "coverage_id": null,
+      "item_count": 0,
+      "error_code": "config_disabled"
+    },
+    {
+      "source": "arxiv",
+      "started_at": "2026-10-22T00:23:54.465624Z",
+      "finished_at": "2026-10-22T00:26:13.876415Z",
+      "status": "partial",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "item_count": 9600,
+      "error_code": "http_429"
+    },
     {
       "source": "openalex",
       "started_at": "2026-10-21T00:23:24.825290Z",

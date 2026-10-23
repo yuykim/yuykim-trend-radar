@@ -46,6 +46,16 @@
       "source": "arxiv",
       "coverage_id": "arxiv:ac49e33873bea0504639",
       "state": "missing"
+    },
+    {
+      "entity_id": "jepa",
+      "metric": "count_28d",
+      "value": null,
+      "available_at": "2026-10-23T00:22:36.177201Z",
+      "observed_at": "2026-10-23T00:22:36.177201Z",
+      "source": "arxiv",
+      "coverage_id": "arxiv:ac49e33873bea0504639",
+      "state": "missing"
     }
   ],
   "evidence_edges": [],

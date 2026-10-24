@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-23T00:22:36.177201+00:00",
+  "as_of": "2026-10-24T00:13:00.983274+00:00",
   "collection_cutoff": "2026-10-18T22:00:00+00:00",
   "collected": 10000,
   "visible_documents": 10000,
@@ -7,8 +7,8 @@
   "source_runs": [
     {
       "source": "arxiv",
-      "started_at": "2026-10-23T00:22:17.106041Z",
-      "finished_at": "2026-10-23T00:22:35.546385Z",
+      "started_at": "2026-10-24T00:12:40.249837Z",
+      "finished_at": "2026-10-24T00:13:00.708475Z",
       "status": "partial",
       "coverage_id": "arxiv:ac49e33873bea0504639",
       "item_count": 10000,
@@ -16,8 +16,8 @@
     },
     {
       "source": "openreview",
-      "started_at": "2026-10-23T00:22:35.551852Z",
-      "finished_at": "2026-10-23T00:22:35.551856Z",
+      "started_at": "2026-10-24T00:13:00.716308Z",
+      "finished_at": "2026-10-24T00:13:00.716311Z",
       "status": "disabled",
       "coverage_id": null,
       "item_count": 0,
@@ -25,8 +25,8 @@
     },
     {
       "source": "openalex",
-      "started_at": "2026-10-23T00:22:35.555980Z",
-      "finished_at": "2026-10-23T00:22:35.555983Z",
+      "started_at": "2026-10-24T00:13:00.720428Z",
+      "finished_at": "2026-10-24T00:13:00.720430Z",
       "status": "disabled",
       "coverage_id": null,
       "item_count": 0,
